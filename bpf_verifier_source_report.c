@@ -33,12 +33,11 @@
 #include <dwarf.h>
 
 #define TRACE_FILE       "/sys/kernel/tracing/trace"
-#define MAX_LINE         512
+#define MAX_LINE         1024
 #define MAX_SOURCE_LINE  512
 #define MAX_INSTRUCTIONS 10000
-#define MAX_SOURCE_LINES 50000  /* max lines we'll read from the .c file */
+#define MAX_SOURCE_LINES 50000
 
-/* Each BPF instruction is exactly 8 bytes (struct bpf_insn) */
 #define BPF_INSN_SIZE 8
 
 /* ──────────────────────────────────────────────
@@ -48,6 +47,8 @@
 typedef struct {
     unsigned int  insn_idx;
     unsigned long states_mismatched;
+
+    /* mismatch_breakdown fields */
     unsigned int  mismatch_cbdepth;
     unsigned int  mismatch_curframe;
     unsigned int  mismatch_spec;
@@ -57,7 +58,17 @@ typedef struct {
     unsigned int  mismatch_registers;
     unsigned int  mismatch_stack;
 
-    /* Filled in by dwarf_lookup() */
+    /* reg_field_mismatch fields (only meaningful when mismatch_registers > 0) */
+    unsigned int  reg_type;
+    unsigned int  reg_range;
+    unsigned int  reg_var_off;
+    unsigned int  reg_id;
+    unsigned int  reg_ref_obj_id;
+    unsigned int  reg_offset;
+    unsigned int  reg_frameno;
+    unsigned int  reg_other;
+
+    /* DWARF source location */
     char          src_file[MAX_SOURCE_LINE];
     int           src_line;
     char          src_text[MAX_SOURCE_LINE];
@@ -74,6 +85,15 @@ typedef struct {
     unsigned int  sleepable;
     unsigned int  refsafe;
     unsigned int  callsite;
+    /* reg field sub-breakdown */
+    unsigned int  reg_type;
+    unsigned int  reg_range;
+    unsigned int  reg_var_off;
+    unsigned int  reg_id;
+    unsigned int  reg_ref_obj_id;
+    unsigned int  reg_offset;
+    unsigned int  reg_frameno;
+    unsigned int  reg_other;
 } line_stat_t;
 
 /* ──────────────────────────────────────────────
@@ -101,6 +121,8 @@ int parse_tracepoint(const char *prog_name, insn_stat_t *stats, int *count)
         unsigned long states_mismatched = 0;
         unsigned int  cbdepth = 0, curframe = 0, spec = 0, sleepable = 0;
         unsigned int  refsafe = 0, callsite = 0, regs = 0, stack = 0;
+        unsigned int  rtype = 0, rrange = 0, rvar_off = 0, rid = 0;
+        unsigned int  rref_obj_id = 0, roffset = 0, rframeno = 0, rother = 0;
 
         char *ptr = strstr(line, "insn_idx=");
         if (ptr) sscanf(ptr, "insn_idx=%u", &insn_idx);
@@ -119,6 +141,16 @@ int parse_tracepoint(const char *prog_name, insn_stat_t *stats, int *count)
                 &refsafe, &callsite, &regs, &stack);
         }
 
+        ptr = strstr(line, "reg_field_mismatch(");
+        if (ptr) {
+            sscanf(ptr,
+                "reg_field_mismatch(type=%u range=%u var_off=%u id=%u "
+                "ref_obj_id=%u offset=%u frameno=%u other=%u)",
+                &rtype, &rrange, &rvar_off, &rid,
+                &rref_obj_id, &roffset, &rframeno, &rother);
+        }
+
+        /* Aggregate if instruction already seen */
         int found = 0;
         for (int i = 0; i < found_count; i++) {
             if (stats[i].insn_idx == insn_idx) {
@@ -131,6 +163,14 @@ int parse_tracepoint(const char *prog_name, insn_stat_t *stats, int *count)
                 stats[i].mismatch_callsite   += callsite;
                 stats[i].mismatch_registers  += regs;
                 stats[i].mismatch_stack      += stack;
+                stats[i].reg_type            += rtype;
+                stats[i].reg_range           += rrange;
+                stats[i].reg_var_off         += rvar_off;
+                stats[i].reg_id              += rid;
+                stats[i].reg_ref_obj_id      += rref_obj_id;
+                stats[i].reg_offset          += roffset;
+                stats[i].reg_frameno         += rframeno;
+                stats[i].reg_other           += rother;
                 found = 1;
                 break;
             }
@@ -148,6 +188,14 @@ int parse_tracepoint(const char *prog_name, insn_stat_t *stats, int *count)
             s->mismatch_callsite  = callsite;
             s->mismatch_registers = regs;
             s->mismatch_stack     = stack;
+            s->reg_type           = rtype;
+            s->reg_range          = rrange;
+            s->reg_var_off        = rvar_off;
+            s->reg_id             = rid;
+            s->reg_ref_obj_id     = rref_obj_id;
+            s->reg_offset         = roffset;
+            s->reg_frameno        = rframeno;
+            s->reg_other          = rother;
             s->src_line           = 0;
             s->src_file[0]        = '\0';
             s->src_text[0]        = '\0';
@@ -161,7 +209,7 @@ int parse_tracepoint(const char *prog_name, insn_stat_t *stats, int *count)
 }
 
 /* ──────────────────────────────────────────────
- * Source-line reader (single line, for terminal)
+ * Source-line reader
  * ────────────────────────────────────────────── */
 
 static void read_source_line(const char *filepath, int lineno, char *buf, size_t bufsz)
@@ -279,6 +327,10 @@ int dwarf_lookup(const char *obj_path, insn_stat_t *stats, int count)
  * Terminal report printer
  * ────────────────────────────────────────────── */
 
+/* Print a single non-zero u32 field with a label, indented */
+#define PRINT_NZ(label, val) \
+    do { if ((val) > 0) printf("      %-28s %u\n", (label), (val)); } while(0)
+
 void print_report(insn_stat_t *stats, int count, int top)
 {
     printf("\n");
@@ -325,23 +377,39 @@ void print_report(insn_stat_t *stats, int count, int top)
             printf("Source: (no DWARF mapping found)\n");
         }
 
-        printf("Mismatch Breakdown:\n");
-        if (s->mismatch_registers > 0)
-            printf("  - Register state:    %u\n", s->mismatch_registers);
-        if (s->mismatch_stack > 0)
-            printf("  - Stack state:       %u\n", s->mismatch_stack);
-        if (s->mismatch_cbdepth > 0)
-            printf("  - Call stack depth:  %u\n", s->mismatch_cbdepth);
-        if (s->mismatch_curframe > 0)
-            printf("  - Current frame:     %u\n", s->mismatch_curframe);
-        if (s->mismatch_spec > 0)
-            printf("  - Speculative state: %u\n", s->mismatch_spec);
-        if (s->mismatch_sleepable > 0)
-            printf("  - Sleepable flag:    %u\n", s->mismatch_sleepable);
-        if (s->mismatch_refsafe > 0)
-            printf("  - Reference safety:  %u\n", s->mismatch_refsafe);
-        if (s->mismatch_callsite > 0)
-            printf("  - Call site context: %u\n", s->mismatch_callsite);
+        /* ── State mismatch breakdown ── */
+        bool has_breakdown = s->mismatch_registers || s->mismatch_stack ||
+                             s->mismatch_cbdepth   || s->mismatch_curframe ||
+                             s->mismatch_spec       || s->mismatch_sleepable ||
+                             s->mismatch_refsafe    || s->mismatch_callsite;
+        if (has_breakdown) {
+            printf("  Mismatch breakdown:\n");
+            PRINT_NZ("Register state:",    s->mismatch_registers);
+            PRINT_NZ("Stack state:",       s->mismatch_stack);
+            PRINT_NZ("Call stack depth:",  s->mismatch_cbdepth);
+            PRINT_NZ("Current frame:",     s->mismatch_curframe);
+            PRINT_NZ("Speculative state:", s->mismatch_spec);
+            PRINT_NZ("Sleepable flag:",    s->mismatch_sleepable);
+            PRINT_NZ("Reference safety:",  s->mismatch_refsafe);
+            PRINT_NZ("Call site context:", s->mismatch_callsite);
+        }
+
+        /* ── Register field sub-breakdown (only when register mismatches exist) ── */
+        bool has_reg_fields = s->mismatch_registers > 0 &&
+                              (s->reg_type || s->reg_range  || s->reg_var_off ||
+                               s->reg_id   || s->reg_ref_obj_id || s->reg_offset ||
+                               s->reg_frameno || s->reg_other);
+        if (has_reg_fields) {
+            printf("  Register field causing mismatch:\n");
+            PRINT_NZ("Type mismatch:",        s->reg_type);
+            PRINT_NZ("Value range:",          s->reg_range);
+            PRINT_NZ("Variable offset:",      s->reg_var_off);
+            PRINT_NZ("Register ID:",          s->reg_id);
+            PRINT_NZ("Ref object ID:",        s->reg_ref_obj_id);
+            PRINT_NZ("Pointer offset:",       s->reg_offset);
+            PRINT_NZ("Frame number:",         s->reg_frameno);
+            PRINT_NZ("Other:",                s->reg_other);
+        }
 
         printf("──────────────────────────────────────────────────────────────────────────────────────\n");
     }
@@ -349,7 +417,7 @@ void print_report(insn_stat_t *stats, int count, int top)
 }
 
 /* ──────────────────────────────────────────────
- * HTML escape helper
+ * HTML helpers
  * ────────────────────────────────────────────── */
 
 static void html_escape(FILE *fp, const char *s)
@@ -366,13 +434,15 @@ static void html_escape(FILE *fp, const char *s)
     }
 }
 
+/* Emit a tooltip row only if value > 0 */
+static void tip_row(FILE *fp, const char *label, unsigned int val)
+{
+    if (val > 0)
+        fprintf(fp, "%s: %u<br>", label, val);
+}
+
 /* ──────────────────────────────────────────────
- * HTML heatmap report writer
- *
- * Reads the source file, builds a per-line
- * mismatch table (summing all instructions that
- * map to each line), then emits a self-contained
- * HTML file with inline CSS/JS.
+ * HTML heatmap writer
  * ────────────────────────────────────────────── */
 
 int write_html_report(const char     *html_path,
@@ -380,7 +450,7 @@ int write_html_report(const char     *html_path,
                       insn_stat_t    *stats,
                       int             stat_count)
 {
-    /* ── 1. Determine source file path from the first resolved stat ── */
+    /* Find source file from DWARF data */
     const char *src_path = NULL;
     for (int i = 0; i < stat_count; i++) {
         if (stats[i].src_line > 0 && stats[i].src_file[0] != '\0') {
@@ -393,20 +463,16 @@ int write_html_report(const char     *html_path,
         return -1;
     }
 
-    /* ── 2. Read the entire source file into a line array ── */
+    /* Read source file */
     FILE *src_fp = fopen(src_path, "r");
     if (!src_fp) {
         fprintf(stderr, "HTML: cannot open source file '%s'\n", src_path);
         return -1;
     }
-
-    /* We'll store each source line as a malloc'd string */
     char  **src_lines  = calloc(MAX_SOURCE_LINES, sizeof(char *));
     int     src_nlines = 0;
     char    tmp[MAX_SOURCE_LINE];
-
     while (fgets(tmp, sizeof(tmp), src_fp) && src_nlines < MAX_SOURCE_LINES) {
-        /* Strip trailing newline */
         size_t len = strlen(tmp);
         while (len > 0 && (tmp[len-1] == '\n' || tmp[len-1] == '\r'))
             tmp[--len] = '\0';
@@ -414,250 +480,166 @@ int write_html_report(const char     *html_path,
     }
     fclose(src_fp);
 
-    /* ── 3. Build per-line mismatch aggregates ── */
-    line_stat_t *line_stats = calloc(src_nlines + 1, sizeof(line_stat_t));
-    if (!line_stats) {
-        fprintf(stderr, "HTML: out of memory\n");
-        return -1;
-    }
+    /* Build per-line aggregates */
+    line_stat_t *ls = calloc(src_nlines + 1, sizeof(line_stat_t));
+    if (!ls) { fprintf(stderr, "HTML: out of memory\n"); return -1; }
 
     for (int i = 0; i < stat_count; i++) {
         int ln = stats[i].src_line;
         if (ln <= 0 || ln > src_nlines) continue;
-        line_stats[ln].total     += stats[i].states_mismatched;
-        line_stats[ln].registers += stats[i].mismatch_registers;
-        line_stats[ln].stack     += stats[i].mismatch_stack;
-        line_stats[ln].cbdepth   += stats[i].mismatch_cbdepth;
-        line_stats[ln].curframe  += stats[i].mismatch_curframe;
-        line_stats[ln].spec      += stats[i].mismatch_spec;
-        line_stats[ln].sleepable += stats[i].mismatch_sleepable;
-        line_stats[ln].refsafe   += stats[i].mismatch_refsafe;
-        line_stats[ln].callsite  += stats[i].mismatch_callsite;
+        ls[ln].total       += stats[i].states_mismatched;
+        ls[ln].registers   += stats[i].mismatch_registers;
+        ls[ln].stack       += stats[i].mismatch_stack;
+        ls[ln].cbdepth     += stats[i].mismatch_cbdepth;
+        ls[ln].curframe    += stats[i].mismatch_curframe;
+        ls[ln].spec        += stats[i].mismatch_spec;
+        ls[ln].sleepable   += stats[i].mismatch_sleepable;
+        ls[ln].refsafe     += stats[i].mismatch_refsafe;
+        ls[ln].callsite    += stats[i].mismatch_callsite;
+        ls[ln].reg_type        += stats[i].reg_type;
+        ls[ln].reg_range       += stats[i].reg_range;
+        ls[ln].reg_var_off     += stats[i].reg_var_off;
+        ls[ln].reg_id          += stats[i].reg_id;
+        ls[ln].reg_ref_obj_id  += stats[i].reg_ref_obj_id;
+        ls[ln].reg_offset      += stats[i].reg_offset;
+        ls[ln].reg_frameno     += stats[i].reg_frameno;
+        ls[ln].reg_other       += stats[i].reg_other;
     }
 
-    /* Find maximum for relative scaling */
-    unsigned long max_mismatches = 1; /* avoid div-by-zero */
+    unsigned long max_val = 1;
+    unsigned long total_mismatches = 0;
+    int hot_lines = 0, hot_line_no = 0;
+    unsigned long hot_line_val = 0;
     for (int ln = 1; ln <= src_nlines; ln++) {
-        if (line_stats[ln].total > max_mismatches)
-            max_mismatches = line_stats[ln].total;
+        total_mismatches += ls[ln].total;
+        if (ls[ln].total > 0) hot_lines++;
+        if (ls[ln].total > max_val) max_val = ls[ln].total;
+        if (ls[ln].total > hot_line_val) { hot_line_val = ls[ln].total; hot_line_no = ln; }
     }
 
-    /* ── 4. Open HTML output ── */
     FILE *out = fopen(html_path, "w");
-    if (!out) {
-        perror("HTML: cannot open output file");
-        free(line_stats);
-        return -1;
-    }
+    if (!out) { perror("HTML: cannot open output file"); free(ls); return -1; }
 
-    /* ── 5. Emit HTML head + CSS ── */
+    /* ── HEAD + CSS ── */
     fprintf(out,
-        "<!DOCTYPE html>\n"
-        "<html lang=\"en\">\n"
-        "<head>\n"
+        "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n"
         "<meta charset=\"UTF-8\">\n"
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
         "<title>BPF Verifier Heatmap — %s</title>\n"
         "<style>\n"
-        "  * { box-sizing: border-box; margin: 0; padding: 0; }\n"
-        "  body {\n"
-        "    background: #1e1e2e;\n"
-        "    color: #cdd6f4;\n"
-        "    font-family: 'Segoe UI', system-ui, sans-serif;\n"
-        "    padding: 2rem;\n"
-        "  }\n"
-        "  h1 { font-size: 1.4rem; margin-bottom: 0.3rem; color: #cba6f7; }\n"
-        "  .meta { font-size: 0.85rem; color: #6c7086; margin-bottom: 1.5rem; }\n"
-        "  .legend {\n"
-        "    display: flex; align-items: center; gap: 0.8rem;\n"
-        "    margin-bottom: 1.2rem; font-size: 0.82rem; color: #a6adc8;\n"
-        "  }\n"
-        "  .legend-bar {\n"
-        "    width: 160px; height: 14px; border-radius: 3px;\n"
-        "    background: linear-gradient(to right, #1e1e2e, #ff0000);\n"
-        "    border: 1px solid #45475a;\n"
-        "  }\n"
-        "  /* stats summary table */\n"
-        "  .summary {\n"
-        "    display: flex; flex-wrap: wrap; gap: 1rem;\n"
-        "    margin-bottom: 1.8rem;\n"
-        "  }\n"
-        "  .stat-card {\n"
-        "    background: #313244; border-radius: 8px;\n"
-        "    padding: 0.7rem 1.2rem; min-width: 160px;\n"
-        "  }\n"
-        "  .stat-card .label { font-size: 0.75rem; color: #6c7086; }\n"
-        "  .stat-card .value { font-size: 1.3rem; font-weight: 600; color: #cba6f7; }\n"
-        "  /* code block */\n"
-        "  .code-wrap {\n"
-        "    background: #181825;\n"
-        "    border: 1px solid #313244;\n"
-        "    border-radius: 8px;\n"
-        "    overflow: auto;\n"
-        "    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;\n"
-        "    font-size: 0.82rem;\n"
-        "    line-height: 1.55;\n"
-        "  }\n"
-        "  table.code { width: 100%%; border-collapse: collapse; }\n"
-        "  table.code tr { transition: filter 0.1s; }\n"
-        "  table.code tr:hover { filter: brightness(1.25); cursor: default; }\n"
-        "  td.ln {\n"
-        "    user-select: none; text-align: right;\n"
-        "    padding: 1px 10px 1px 14px;\n"
-        "    color: #45475a; min-width: 3.5em;\n"
-        "    border-right: 1px solid #313244;\n"
-        "    vertical-align: top;\n"
-        "  }\n"
-        "  td.heat {\n"
-        "    width: 6px; min-width: 6px; padding: 0;\n"
-        "    vertical-align: top;\n"
-        "  }\n"
-        "  td.count {\n"
-        "    text-align: right; padding: 1px 8px;\n"
-        "    min-width: 5em; font-size: 0.78rem;\n"
-        "    color: #f38ba8; vertical-align: top;\n"
-        "  }\n"
-        "  td.count.zero { color: transparent; }\n"
-        "  td.src {\n"
-        "    padding: 1px 14px 1px 10px;\n"
-        "    white-space: pre; vertical-align: top;\n"
-        "  }\n"
-        "  /* tooltip */\n"
-        "  .tt {\n"
-        "    position: relative;\n"
-        "  }\n"
-        "  .tt .tip {\n"
-        "    visibility: hidden; opacity: 0;\n"
-        "    background: #313244; color: #cdd6f4;\n"
-        "    border: 1px solid #585b70;\n"
-        "    border-radius: 6px; padding: 0.5rem 0.8rem;\n"
-        "    position: absolute; left: 0; top: 100%%;\n"
-        "    z-index: 10; white-space: nowrap;\n"
-        "    font-size: 0.78rem; line-height: 1.6;\n"
-        "    box-shadow: 0 4px 16px rgba(0,0,0,0.5);\n"
-        "    pointer-events: none;\n"
-        "    transition: opacity 0.15s;\n"
-        "    margin-top: 2px;\n"
-        "  }\n"
-        "  .tt:hover .tip { visibility: visible; opacity: 1; }\n"
-        "</style>\n"
-        "</head>\n"
-        "<body>\n",
+        "* { box-sizing: border-box; margin: 0; padding: 0; }\n"
+        "body { background:#1e1e2e; color:#cdd6f4; font-family:'Segoe UI',system-ui,sans-serif; padding:2rem; }\n"
+        "h1 { font-size:1.4rem; margin-bottom:0.3rem; color:#cba6f7; }\n"
+        ".meta { font-size:0.85rem; color:#6c7086; margin-bottom:1.5rem; }\n"
+        ".cards { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; }\n"
+        ".card { background:#313244; border-radius:8px; padding:0.7rem 1.2rem; min-width:160px; }\n"
+        ".card .lbl { font-size:0.75rem; color:#6c7086; }\n"
+        ".card .val { font-size:1.3rem; font-weight:600; color:#cba6f7; }\n"
+        ".legend { display:flex; align-items:center; gap:0.8rem; margin-bottom:1.2rem; font-size:0.82rem; color:#a6adc8; }\n"
+        ".legend-bar { width:160px; height:14px; border-radius:3px; background:linear-gradient(to right,#1e1e2e,#ff3232); border:1px solid #45475a; }\n"
+        ".code-wrap { background:#181825; border:1px solid #313244; border-radius:8px; overflow:auto; font-family:'JetBrains Mono','Fira Code',monospace; font-size:0.82rem; line-height:1.55; }\n"
+        "table.code { width:100%%; border-collapse:collapse; }\n"
+        "table.code tr:hover { filter:brightness(1.25); cursor:default; }\n"
+        "td.ln { user-select:none; text-align:right; padding:1px 10px 1px 14px; color:#45475a; min-width:3.5em; border-right:1px solid #313244; vertical-align:top; }\n"
+        "td.heat { width:6px; min-width:6px; padding:0; vertical-align:top; }\n"
+        "td.cnt { text-align:right; padding:1px 8px; min-width:5em; font-size:0.78rem; color:#f38ba8; vertical-align:top; }\n"
+        "td.cnt.z { color:transparent; }\n"
+        "td.src { padding:1px 14px 1px 10px; white-space:pre; vertical-align:top; }\n"
+        /* tooltip */
+        ".tt { position:relative; }\n"
+        ".tip { visibility:hidden; opacity:0; background:#313244; color:#cdd6f4; border:1px solid #585b70;\n"
+        "       border-radius:6px; padding:0.5rem 0.8rem; position:absolute; left:0; top:100%%; z-index:10;\n"
+        "       white-space:nowrap; font-size:0.78rem; line-height:1.8; box-shadow:0 4px 16px rgba(0,0,0,.5);\n"
+        "       pointer-events:none; transition:opacity .15s; margin-top:2px; }\n"
+        ".tt:hover .tip { visibility:visible; opacity:1; }\n"
+        /* reg field sub-section inside tooltip */
+        ".tip .reg-hdr { color:#cba6f7; font-weight:600; margin-top:0.35rem; display:block; }\n"
+        ".tip .reg-fields { color:#a6e3a1; }\n"
+        "</style>\n</head>\n<body>\n",
         prog_name);
 
-    /* ── 6. Header + summary cards ── */
-    unsigned long total_mismatches = 0;
-    int           hot_lines        = 0;
-    int           hot_line_no      = 0;
-    unsigned long hot_line_val     = 0;
-    for (int ln = 1; ln <= src_nlines; ln++) {
-        total_mismatches += line_stats[ln].total;
-        if (line_stats[ln].total > 0) hot_lines++;
-        if (line_stats[ln].total > hot_line_val) {
-            hot_line_val = line_stats[ln].total;
-            hot_line_no  = ln;
-        }
-    }
-
+    /* ── Header + summary cards ── */
     fprintf(out,
         "<h1>BPF Verifier Heatmap</h1>\n"
         "<div class=\"meta\">Program: <strong>%s</strong> &nbsp;|&nbsp; Source: <strong>%s</strong></div>\n"
-        "<div class=\"summary\">\n"
-        "  <div class=\"stat-card\"><div class=\"label\">Total mismatches</div>"
-        "<div class=\"value\">%lu</div></div>\n"
-        "  <div class=\"stat-card\"><div class=\"label\">Hot lines</div>"
-        "<div class=\"value\">%d</div></div>\n"
-        "  <div class=\"stat-card\"><div class=\"label\">Hottest line</div>"
-        "<div class=\"value\">:%d</div></div>\n"
-        "  <div class=\"stat-card\"><div class=\"label\">Source lines</div>"
-        "<div class=\"value\">%d</div></div>\n"
+        "<div class=\"cards\">\n"
+        "  <div class=\"card\"><div class=\"lbl\">Total mismatches</div><div class=\"val\">%lu</div></div>\n"
+        "  <div class=\"card\"><div class=\"lbl\">Hot lines</div><div class=\"val\">%d</div></div>\n"
+        "  <div class=\"card\"><div class=\"lbl\">Hottest line</div><div class=\"val\">:%d</div></div>\n"
+        "  <div class=\"card\"><div class=\"lbl\">Source lines</div><div class=\"val\">%d</div></div>\n"
         "</div>\n"
-        "<div class=\"legend\">"
-        "<span>Low</span><div class=\"legend-bar\"></div><span>High</span>"
-        "<span style=\"margin-left:1rem;color:#45475a\">Hover a highlighted line for breakdown</span>"
-        "</div>\n",
+        "<div class=\"legend\"><span>Low</span><div class=\"legend-bar\"></div><span>High</span>"
+        "<span style=\"margin-left:1rem;color:#45475a\">Hover a highlighted line for full breakdown</span></div>\n",
         prog_name, src_path,
         total_mismatches, hot_lines, hot_line_no, src_nlines);
 
-    /* ── 7. Code table ── */
+    /* ── Code table ── */
     fprintf(out, "<div class=\"code-wrap\"><table class=\"code\">\n");
 
     for (int ln = 1; ln <= src_nlines; ln++) {
-        unsigned long lv = line_stats[ln].total;
+        unsigned long lv = ls[ln].total;
+        double rel    = (double)lv / (double)max_val;
+        double bg_alpha  = lv > 0 ? 0.08 + 0.82 * rel : 0.0;
+        double bar_alpha = lv > 0 ? 0.15 + 0.85 * rel : 0.0;
 
-        /* Background color: rgba(255,0,0, intensity) relative to max */
-        double intensity = (double)lv / (double)max_mismatches;
-        /* Use a sqrt scale so low-count lines are still visible */
-        double alpha = 0.0;
-        if (lv > 0) {
-            alpha = 0.08 + 0.72 * (intensity > 1.0 ? 1.0 : intensity);
-            /* sqrt scaling for better contrast at the low end */
-            double rel = (double)lv / (double)max_mismatches;
-            double sq  = rel < 1.0 ? rel * rel * rel : 1.0; /* cubic for subtlety */
-            (void)sq; /* we keep linear but clamp min alpha for visibility */
-        }
-
-        char bg_style[64] = "";
-        if (lv > 0) {
-            /* Recalculate with sqrt for better visual spread */
-            double rel = (double)lv / (double)max_mismatches;
-            double scaled = rel > 0 ? 0.08 + 0.82 * rel : 0.0;
-            if (scaled > 1.0) scaled = 1.0;
-            snprintf(bg_style, sizeof(bg_style),
-                     " style=\"background:rgba(255,50,50,%.3f)\"", scaled);
-            (void)alpha;
-        }
-
-        /* Row open — add tt class only if hot */
         if (lv > 0)
-            fprintf(out, "<tr%s class=\"tt\">", bg_style);
+            fprintf(out, "<tr style=\"background:rgba(255,50,50,%.3f)\" class=\"tt\">", bg_alpha);
         else
             fprintf(out, "<tr>");
 
         /* Line number */
         fprintf(out, "<td class=\"ln\">%d</td>", ln);
 
-        /* Heat bar cell */
-        if (lv > 0) {
-            double rel    = (double)lv / (double)max_mismatches;
-            double scaled = 0.15 + 0.85 * rel;
-            fprintf(out, "<td class=\"heat\" style=\"background:rgba(255,50,50,%.3f)\"></td>", scaled);
-        } else {
+        /* Heat bar */
+        if (lv > 0)
+            fprintf(out, "<td class=\"heat\" style=\"background:rgba(255,50,50,%.3f)\"></td>", bar_alpha);
+        else
             fprintf(out, "<td class=\"heat\"></td>");
-        }
 
         /* Mismatch count */
         if (lv > 0)
-            fprintf(out, "<td class=\"count\">%lu</td>", lv);
+            fprintf(out, "<td class=\"cnt\">%lu</td>", lv);
         else
-            fprintf(out, "<td class=\"count zero\">0</td>");
+            fprintf(out, "<td class=\"cnt z\">0</td>");
 
         /* Source code */
         fprintf(out, "<td class=\"src\">");
-        if (src_lines[ln-1])
-            html_escape(out, src_lines[ln-1]);
+        if (src_lines[ln-1]) html_escape(out, src_lines[ln-1]);
         fprintf(out, "</td>");
 
-        /* Tooltip (only for hot lines) */
+        /* Tooltip */
         if (lv > 0) {
             fprintf(out, "<td style=\"position:relative;padding:0\"><div class=\"tip\">");
-            fprintf(out, "<strong>Line %d — %lu mismatches</strong><br>", ln, lv);
-            if (line_stats[ln].registers)
-                fprintf(out, "Register state: %u<br>",  line_stats[ln].registers);
-            if (line_stats[ln].stack)
-                fprintf(out, "Stack state: %u<br>",     line_stats[ln].stack);
-            if (line_stats[ln].cbdepth)
-                fprintf(out, "Call depth: %u<br>",      line_stats[ln].cbdepth);
-            if (line_stats[ln].curframe)
-                fprintf(out, "Current frame: %u<br>",   line_stats[ln].curframe);
-            if (line_stats[ln].spec)
-                fprintf(out, "Speculative: %u<br>",     line_stats[ln].spec);
-            if (line_stats[ln].sleepable)
-                fprintf(out, "Sleepable: %u<br>",       line_stats[ln].sleepable);
-            if (line_stats[ln].refsafe)
-                fprintf(out, "Ref safety: %u<br>",      line_stats[ln].refsafe);
-            if (line_stats[ln].callsite)
-                fprintf(out, "Call site: %u<br>",       line_stats[ln].callsite);
+            fprintf(out, "<strong>Line %d &mdash; %lu mismatches</strong><br>", ln, lv);
+
+            /* State breakdown */
+            tip_row(out, "Register state",    ls[ln].registers);
+            tip_row(out, "Stack state",       ls[ln].stack);
+            tip_row(out, "Call depth",        ls[ln].cbdepth);
+            tip_row(out, "Current frame",     ls[ln].curframe);
+            tip_row(out, "Speculative",       ls[ln].spec);
+            tip_row(out, "Sleepable",         ls[ln].sleepable);
+            tip_row(out, "Ref safety",        ls[ln].refsafe);
+            tip_row(out, "Call site",         ls[ln].callsite);
+
+            /* Register field sub-breakdown — only shown when there are reg mismatches */
+            bool any_reg_field = ls[ln].reg_type || ls[ln].reg_range  || ls[ln].reg_var_off ||
+                                 ls[ln].reg_id   || ls[ln].reg_ref_obj_id || ls[ln].reg_offset ||
+                                 ls[ln].reg_frameno || ls[ln].reg_other;
+            if (ls[ln].registers > 0 && any_reg_field) {
+                fprintf(out, "<span class=\"reg-hdr\">Register field causing mismatch:</span>");
+                fprintf(out, "<span class=\"reg-fields\">");
+                tip_row(out, "&nbsp; Type mismatch",   ls[ln].reg_type);
+                tip_row(out, "&nbsp; Value range",     ls[ln].reg_range);
+                tip_row(out, "&nbsp; Variable offset", ls[ln].reg_var_off);
+                tip_row(out, "&nbsp; Register ID",     ls[ln].reg_id);
+                tip_row(out, "&nbsp; Ref object ID",   ls[ln].reg_ref_obj_id);
+                tip_row(out, "&nbsp; Pointer offset",  ls[ln].reg_offset);
+                tip_row(out, "&nbsp; Frame number",    ls[ln].reg_frameno);
+                tip_row(out, "&nbsp; Other",           ls[ln].reg_other);
+                fprintf(out, "</span>");
+            }
+
             fprintf(out, "</div></td>");
         }
 
@@ -667,12 +649,9 @@ int write_html_report(const char     *html_path,
     fprintf(out, "</table></div>\n</body>\n</html>\n");
     fclose(out);
 
-    /* ── 8. Free source lines ── */
-    for (int i = 0; i < src_nlines; i++)
-        free(src_lines[i]);
+    for (int i = 0; i < src_nlines; i++) free(src_lines[i]);
     free(src_lines);
-    free(line_stats);
-
+    free(ls);
     return 0;
 }
 
@@ -687,12 +666,11 @@ static void usage(const char *prog)
         "Examples:\n"
         "  %s complex_verifie ./complex_mismatches.o\n"
         "  %s --top 5 complex_verifie ./complex_mismatches.o\n"
-        "  %s --html report.html complex_verifie ./complex_mismatches.o\n"
-        "  %s --top 10 --html report.html complex_verifie ./complex_mismatches.o\n\n"
+        "  %s --html report.html complex_verifie ./complex_mismatches.o\n\n"
         "Options:\n"
         "  --top N          Show only the N instructions with the most mismatches\n"
         "  --html <file>    Write an HTML heatmap of the source file to <file>\n",
-        prog, prog, prog, prog, prog);
+        prog, prog, prog, prog);
 }
 
 int main(int argc, char *argv[])
