@@ -5,20 +5,29 @@
  * per instruction, then maps each instruction back to its C source line
  * using DWARF debug info embedded in the compiled BPF .o file.
  *
+ * State-level mismatch categories tracked:
+ *   cbdepth, curframe, spec, sleepable, refsafe, callsite, registers, stack
+ *
+ * Register-field mismatch sub-categories tracked (all 8):
+ *   type, range, var_off, id, ref_obj_id, offset, frameno, other
+ *   (requires kernel patch + bpf_verifier.h with reg_field_pair3/pair4 args)
+ *
  * Requirements:
  *   - BPF program compiled with: clang -g -O2 -target bpf -c prog.bpf.c -o prog.bpf.o
  *   - elfutils development libraries: apt install libdw-dev / dnf install elfutils-devel
+ *   - Kernel built with verifier.patch and trace/events/bpf_verifier.h applied
  *
  * Compile:
  *   gcc -O2 -o bpf_verifier_source_report bpf_verifier_source_report.c -ldw -lelf
  *
  * Usage:
- *   sudo ./bpf_verifier_source_report [--top N] [--html out.html] <prog_name> <prog.bpf.o>
+ *   sudo ./bpf_verifier_source_report [--top N] [--html out.html] [--json out.json] <prog_name> <prog.bpf.o>
  *
  * Examples:
  *   sudo ./bpf_verifier_source_report test_comp ./test_comp.bpf.o
  *   sudo ./bpf_verifier_source_report --top 5 test_comp ./test_comp.bpf.o
  *   sudo ./bpf_verifier_source_report --html report.html test_comp ./test_comp.bpf.o
+ *   sudo ./bpf_verifier_source_report --json report.json test_comp ./test_comp.bpf.o
  */
 
 #include <stdio.h>
@@ -656,27 +665,181 @@ int write_html_report(const char     *html_path,
 }
 
 /* ──────────────────────────────────────────────
+ * JSON helpers
+ * ────────────────────────────────────────────── */
+
+/* Escape a string for JSON: backslash, double-quote, and control chars */
+static void json_escape(FILE *fp, const char *s)
+{
+    for (; *s; s++) {
+        unsigned char c = (unsigned char)*s;
+        if      (c == '"')  fputs("\\\"", fp);
+        else if (c == '\\') fputs("\\\\", fp);
+        else if (c == '\n') fputs("\\n",  fp);
+        else if (c == '\r') fputs("\\r",  fp);
+        else if (c == '\t') fputs("\\t",  fp);
+        else if (c < 0x20)  fprintf(fp, "\\u%04x", c);
+        else                fputc(c, fp);
+    }
+}
+
+/* ──────────────────────────────────────────────
+ * JSON report writer
+ * ────────────────────────────────────────────── */
+
+/*
+ * Emits one JSON object per instruction, sorted by states_mismatched
+ * descending (same order as the terminal report).  The array is wrapped
+ * in a top-level object that also carries program-level metadata so the
+ * file is self-contained.
+ *
+ * Schema (abbreviated):
+ * {
+ *   "prog_name": "foo",
+ *   "elf_obj":   "foo.bpf.o",
+ *   "total_instructions_with_mismatches": N,
+ *   "instructions": [
+ *     {
+ *       "insn_idx":         42,
+ *       "byte_offset":      336,
+ *       "states_mismatched": 6,
+ *       "source": {                        // omitted when no DWARF mapping
+ *         "file": "/path/to/prog.bpf.c",
+ *         "line": 87,
+ *         "text": "if (ctx->data_end > ...)"
+ *       },
+ *       "mismatch_breakdown": {
+ *         "registers":  5,
+ *         "stack":      1,
+ *         "cbdepth":    0,
+ *         "curframe":   0,
+ *         "speculative":0,
+ *         "sleepable":  0,
+ *         "refsafe":    0,
+ *         "callsite":   0
+ *       },
+ *       "reg_field_mismatch": {            // omitted when registers == 0
+ *         "type":       0,
+ *         "range":      3,
+ *         "var_off":    0,
+ *         "id":         2,
+ *         "ref_obj_id": 0,
+ *         "offset":     0,
+ *         "frameno":    0,
+ *         "other":      0
+ *       }
+ *     },
+ *     ...
+ *   ]
+ * }
+ */
+int write_json_report(const char  *json_path,
+                      const char  *prog_name,
+                      const char  *obj_path,
+                      insn_stat_t *stats,
+                      int          count,
+                      int          top)
+{
+    FILE *fp = fopen(json_path, "w");
+    if (!fp) {
+        perror("JSON: cannot open output file");
+        return -1;
+    }
+
+    /* stats[] is already sorted by print_report(); respect --top */
+    int display = (top > 0 && top < count) ? top : count;
+
+    /* Compute total mismatches across displayed instructions */
+    unsigned long total_mismatches = 0;
+    for (int i = 0; i < display; i++)
+        total_mismatches += stats[i].states_mismatched;
+
+    /* ── Top-level object ── */
+    fprintf(fp, "{\n");
+    fprintf(fp, "  \"prog_name\": \""); json_escape(fp, prog_name); fprintf(fp, "\",\n");
+    fprintf(fp, "  \"elf_obj\": \"");   json_escape(fp, obj_path);  fprintf(fp, "\",\n");
+    fprintf(fp, "  \"total_instructions_with_mismatches\": %d,\n", count);
+    fprintf(fp, "  \"displayed\": %d,\n", display);
+    fprintf(fp, "  \"total_mismatches_displayed\": %lu,\n", total_mismatches);
+    fprintf(fp, "  \"instructions\": [\n");
+
+    for (int i = 0; i < display; i++) {
+        insn_stat_t *s = &stats[i];
+        bool last = (i == display - 1);
+
+        fprintf(fp, "    {\n");
+        fprintf(fp, "      \"insn_idx\": %u,\n",          s->insn_idx);
+        fprintf(fp, "      \"byte_offset\": %u,\n",       s->insn_idx * BPF_INSN_SIZE);
+        fprintf(fp, "      \"states_mismatched\": %lu",   s->states_mismatched);
+
+        /* ── Source location (optional) ── */
+        if (s->src_line > 0) {
+            fprintf(fp, ",\n      \"source\": {\n");
+            fprintf(fp, "        \"file\": \""); json_escape(fp, s->src_file); fprintf(fp, "\",\n");
+            fprintf(fp, "        \"line\": %d,\n", s->src_line);
+            fprintf(fp, "        \"text\": \""); json_escape(fp, s->src_text); fprintf(fp, "\"\n");
+            fprintf(fp, "      }");
+        }
+
+        /* ── State-level mismatch breakdown (always present) ── */
+        fprintf(fp, ",\n      \"mismatch_breakdown\": {\n");
+        fprintf(fp, "        \"registers\":   %u,\n", s->mismatch_registers);
+        fprintf(fp, "        \"stack\":        %u,\n", s->mismatch_stack);
+        fprintf(fp, "        \"cbdepth\":      %u,\n", s->mismatch_cbdepth);
+        fprintf(fp, "        \"curframe\":     %u,\n", s->mismatch_curframe);
+        fprintf(fp, "        \"speculative\":  %u,\n", s->mismatch_spec);
+        fprintf(fp, "        \"sleepable\":    %u,\n", s->mismatch_sleepable);
+        fprintf(fp, "        \"refsafe\":      %u,\n", s->mismatch_refsafe);
+        fprintf(fp, "        \"callsite\":     %u\n",  s->mismatch_callsite);
+        fprintf(fp, "      }");
+
+        /* ── Register field sub-breakdown (only when registers > 0) ── */
+        if (s->mismatch_registers > 0) {
+            fprintf(fp, ",\n      \"reg_field_mismatch\": {\n");
+            fprintf(fp, "        \"type\":       %u,\n", s->reg_type);
+            fprintf(fp, "        \"range\":      %u,\n", s->reg_range);
+            fprintf(fp, "        \"var_off\":    %u,\n", s->reg_var_off);
+            fprintf(fp, "        \"id\":         %u,\n", s->reg_id);
+            fprintf(fp, "        \"ref_obj_id\": %u,\n", s->reg_ref_obj_id);
+            fprintf(fp, "        \"offset\":     %u,\n", s->reg_offset);
+            fprintf(fp, "        \"frameno\":    %u,\n", s->reg_frameno);
+            fprintf(fp, "        \"other\":      %u\n",  s->reg_other);
+            fprintf(fp, "      }");
+        }
+
+        fprintf(fp, "\n    }%s\n", last ? "" : ",");
+    }
+
+    fprintf(fp, "  ]\n}\n");
+    fclose(fp);
+    return 0;
+}
+
+/* ──────────────────────────────────────────────
  * main
  * ────────────────────────────────────────────── */
 
 static void usage(const char *prog)
 {
     fprintf(stderr,
-        "Usage: %s [--top N] [--html out.html] <program_name> <path/to/prog.bpf.o>\n"
+        "Usage: %s [--top N] [--html out.html] [--json out.json] <program_name> <path/to/prog.bpf.o>\n"
         "Examples:\n"
         "  %s complex_verifie ./complex_mismatches.o\n"
         "  %s --top 5 complex_verifie ./complex_mismatches.o\n"
-        "  %s --html report.html complex_verifie ./complex_mismatches.o\n\n"
+        "  %s --html report.html complex_verifie ./complex_mismatches.o\n"
+        "  %s --json report.json complex_verifie ./complex_mismatches.o\n\n"
         "Options:\n"
         "  --top N          Show only the N instructions with the most mismatches\n"
-        "  --html <file>    Write an HTML heatmap of the source file to <file>\n",
-        prog, prog, prog, prog);
+        "  --html <file>    Write an HTML heatmap of the source file to <file>\n"
+        "  --json <file>    Write a JSON report (per-instruction, with source info) to <file>\n",
+        prog, prog, prog, prog, prog);
 }
 
 int main(int argc, char *argv[])
 {
     int         top       = 0;
     const char *html_path = NULL;
+    const char *json_path = NULL;
     const char *prog_name = NULL;
     const char *obj_path  = NULL;
 
@@ -698,6 +861,12 @@ int main(int argc, char *argv[])
                 usage(argv[0]); return 1;
             }
             html_path = argv[++i];
+        } else if (strcmp(argv[i], "--json") == 0) {
+            if (i + 1 >= argc) {
+                fprintf(stderr, "Error: --json requires a filename argument\n");
+                usage(argv[0]); return 1;
+            }
+            json_path = argv[++i];
         } else if (!prog_name) {
             prog_name = argv[i];
         } else if (!obj_path) {
@@ -717,6 +886,7 @@ int main(int argc, char *argv[])
     printf("ELF obj : %s\n", obj_path);
     if (top > 0)       printf("Mode    : top %d\n", top);
     if (html_path)     printf("HTML    : %s\n", html_path);
+    if (json_path)     printf("JSON    : %s\n", json_path);
     printf("\n");
 
     insn_stat_t *stats = calloc(MAX_INSTRUCTIONS, sizeof(insn_stat_t));
@@ -751,6 +921,14 @@ int main(int argc, char *argv[])
             printf("Done. Open %s in a browser.\n", html_path);
         else
             fprintf(stderr, "Warning: HTML report generation failed.\n");
+    }
+
+    if (json_path) {
+        printf("Writing JSON report to %s ...\n", json_path);
+        if (write_json_report(json_path, prog_name, obj_path, stats, stat_count, top) == 0)
+            printf("Done. %s written.\n", json_path);
+        else
+            fprintf(stderr, "Warning: JSON report generation failed.\n");
     }
 
     free(stats);
