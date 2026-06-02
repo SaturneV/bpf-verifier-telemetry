@@ -1,0 +1,439 @@
+{
+  "prog_name": "run_bench",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/lpm_trie_bench.bpf.o",
+  "total_instructions_with_mismatches": 19,
+  "displayed": 19,
+  "total_mismatches_displayed": 69,
+  "instructions": [
+    {
+      "insn_idx": 53,
+      "byte_offset": 424,
+      "states_mismatched": 39,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 115,
+        "text": "if (!bpf_map_lookup_elem(&trie_map, &key)) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   27,
+        "stack":        19,
+        "cbdepth":      13,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      27
+      }
+    },
+    {
+      "insn_idx": 52,
+      "byte_offset": 416,
+      "states_mismatched": 7,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 115,
+        "text": "if (!bpf_map_lookup_elem(&trie_map, &key)) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      7
+      }
+    },
+    {
+      "insn_idx": 103,
+      "byte_offset": 824,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 84,
+        "text": "key->prefixlen = prefixlen;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 134,
+      "byte_offset": 1072,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 154,
+        "text": "if (err) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 143,
+      "byte_offset": 1144,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 86,
+        "text": "if (random)"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 182,
+      "byte_offset": 1456,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 191,
+      "byte_offset": 1528,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 252,
+      "byte_offset": 2016,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 77,
+      "byte_offset": 616,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 89,
+        "text": "key->data = cur_key++ % nr_entries;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 84,
+      "byte_offset": 672,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 89,
+        "text": "key->data = cur_key++ % nr_entries;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 104,
+      "byte_offset": 832,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 84,
+        "text": "key->prefixlen = prefixlen;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 114,
+      "byte_offset": 912,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 89,
+        "text": "key->data = cur_key++ % nr_entries;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 141,
+      "byte_offset": 1128,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 84,
+        "text": "key->prefixlen = prefixlen;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 147,
+      "byte_offset": 1176,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 87,
+        "text": "key->data = bpf_get_prandom_u32() % nr_entries;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 159,
+      "byte_offset": 1272,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 89,
+        "text": "key->data = cur_key++ % nr_entries;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 189,
+      "byte_offset": 1512,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 217,
+      "byte_offset": 1736,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 229,
+      "byte_offset": 1832,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 236,
+      "byte_offset": 1888,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/lpm_trie_bench.c",
+        "line": 189,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

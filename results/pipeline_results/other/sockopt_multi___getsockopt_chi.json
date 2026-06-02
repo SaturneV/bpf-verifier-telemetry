@@ -1,0 +1,39 @@
+{
+  "prog_name": "_getsockopt_chi",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/sockopt_multi.bpf.o",
+  "total_instructions_with_mismatches": 1,
+  "displayed": 1,
+  "total_mismatches_displayed": 2,
+  "instructions": [
+    {
+      "insn_idx": 31,
+      "byte_offset": 248,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/sockopt_multi.c",
+        "line": 45,
+        "text": "if (ctx->level != SOL_IP || ctx->optname != IP_TOS)"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

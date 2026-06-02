@@ -1,0 +1,39 @@
+{
+  "prog_name": "decrypt_sanity",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/crypto_sanity.bpf.o",
+  "total_instructions_with_mismatches": 1,
+  "displayed": 1,
+  "total_mismatches_displayed": 1,
+  "instructions": [
+    {
+      "insn_idx": 9,
+      "byte_offset": 72,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/crypto_sanity.c",
+        "line": 95,
+        "text": "if (err < 0) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

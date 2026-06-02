@@ -1,0 +1,689 @@
+{
+  "prog_name": "__add_egr_x",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_seg6_loop.bpf.o",
+  "total_instructions_with_mismatches": 23,
+  "displayed": 23,
+  "total_mismatches_displayed": 2643,
+  "instructions": [
+    {
+      "insn_idx": 58,
+      "byte_offset": 464,
+      "states_mismatched": 891,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 150,
+        "text": "if (err)"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        891,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 81,
+      "byte_offset": 648,
+      "states_mismatched": 698,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 143,
+        "text": "if (cur_off == *tlv_off)"
+      },
+      "mismatch_breakdown": {
+        "registers":   698,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      698,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 65,
+      "byte_offset": 520,
+      "states_mismatched": 401,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 153,
+        "text": "if (tlv.type == SR6_TLV_PADDING) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   401,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      401,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 77,
+      "byte_offset": 616,
+      "states_mismatched": 332,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 140,
+        "text": "for (long i = 0; i < 100; i++) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   332,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      332,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 82,
+      "byte_offset": 656,
+      "states_mismatched": 202,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 143,
+        "text": "if (cur_off == *tlv_off)"
+      },
+      "mismatch_breakdown": {
+        "registers":   202,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      202,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 45,
+      "byte_offset": 360,
+      "states_mismatched": 59,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 146,
+        "text": "if (cur_off >= srh_off + ((srh->hdrlen + 1) << 3))"
+      },
+      "mismatch_breakdown": {
+        "registers":   59,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      59,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 64,
+      "byte_offset": 512,
+      "states_mismatched": 17,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 153,
+        "text": "if (tlv.type == SR6_TLV_PADDING) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   17,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      17,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 88,
+      "byte_offset": 704,
+      "states_mismatched": 8,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 175,
+        "text": "else if (!offset_valid)"
+      },
+      "mismatch_breakdown": {
+        "registers":   8,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      8,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 118,
+      "byte_offset": 944,
+      "states_mismatched": 8,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 95,
+        "text": "if (new_pad != old_pad) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   8,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      8,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 127,
+      "byte_offset": 1016,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 102,
+        "text": "if (new_pad > 0) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 76,
+      "byte_offset": 608,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 140,
+        "text": "for (long i = 0; i < 100; i++) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 78,
+      "byte_offset": 624,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 143,
+        "text": "if (cur_off == *tlv_off)"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 124,
+      "byte_offset": 992,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 96,
+        "text": "err = bpf_lwt_seg6_adjust_srh(skb, pad_off,"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 49,
+      "byte_offset": 392,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 146,
+        "text": "if (cur_off >= srh_off + ((srh->hdrlen + 1) << 3))"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 95,
+      "byte_offset": 760,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 203,
+        "text": "if (err)"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 104,
+      "byte_offset": 832,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 207,
+        "text": "if (err)"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 68,
+      "byte_offset": 544,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 170,
+        "text": "if (*pad_off == 0)"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 70,
+      "byte_offset": 560,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 167,
+        "text": "cur_off += sizeof(tlv) + tlv.len;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 93,
+      "byte_offset": 744,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 202,
+        "text": "err = bpf_lwt_seg6_adjust_srh(skb, tlv_off, sizeof(*itlv) + itlv->len);"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 102,
+      "byte_offset": 816,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 206,
+        "text": "err = bpf_lwt_seg6_store_bytes(skb, tlv_off, (void *)itlv, tlv_size);"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 115,
+      "byte_offset": 920,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 219,
+        "text": "else if (new_pad == 8)"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 126,
+      "byte_offset": 1008,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 98,
+        "text": "if (err)"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 183,
+      "byte_offset": 1464,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_seg6_loop.c",
+        "line": 258,
+        "text": "if (err)"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

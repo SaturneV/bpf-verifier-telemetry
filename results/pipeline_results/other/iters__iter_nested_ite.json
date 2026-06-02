@@ -1,0 +1,179 @@
+{
+  "prog_name": "iter_nested_ite",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/iters.bpf.o",
+  "total_instructions_with_mismatches": 6,
+  "displayed": 6,
+  "total_mismatches_displayed": 17,
+  "instructions": [
+    {
+      "insn_idx": 142,
+      "byte_offset": 1136,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 1865,
+        "text": "asm volatile ("
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       2,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 141,
+      "byte_offset": 1128,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 1865,
+        "text": "asm volatile ("
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 145,
+      "byte_offset": 1160,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 587,
+        "text": "bpf_repeat(1000000) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 187,
+      "byte_offset": 1496,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 1559,
+        "text": "if (str[0] == 't')"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 186,
+      "byte_offset": 1488,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 1555,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 220,
+      "byte_offset": 1760,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 233,
+        "text": "bpf_iter_num_new(&it, 5, 10);"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

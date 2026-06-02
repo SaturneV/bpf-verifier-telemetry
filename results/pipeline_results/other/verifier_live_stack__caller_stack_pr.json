@@ -1,0 +1,29 @@
+{
+  "prog_name": "caller_stack_pr",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_live_stack.bpf.o",
+  "total_instructions_with_mismatches": 1,
+  "displayed": 1,
+  "total_mismatches_displayed": 3,
+  "instructions": [
+    {
+      "insn_idx": 9,
+      "byte_offset": 72,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_live_stack.c",
+        "line": 257,
+        "text": "asm volatile ("
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

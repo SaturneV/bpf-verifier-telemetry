@@ -1,0 +1,9 @@
+{
+  "prog_name": "kptr_return_fai",
+  "group": "other",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/struct_ops_kptr_return_fail__wrong_type.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

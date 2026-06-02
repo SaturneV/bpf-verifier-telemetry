@@ -1,0 +1,79 @@
+{
+  "prog_name": "global_list_pus",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/linked_list.bpf.o",
+  "total_instructions_with_mismatches": 3,
+  "displayed": 3,
+  "total_mismatches_displayed": 673,
+  "instructions": [
+    {
+      "insn_idx": 127,
+      "byte_offset": 1016,
+      "states_mismatched": 667,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 98,
+        "text": "n = bpf_list_pop_back(head);"
+      },
+      "mismatch_breakdown": {
+        "registers":   658,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      9,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      658,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 128,
+      "byte_offset": 1024,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 99,
+        "text": "bpf_spin_unlock(lock);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      5,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 142,
+      "byte_offset": 1136,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 33,
+        "text": "f = bpf_obj_new(typeof(*f));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      1,
+        "callsite":     0
+      }
+    }
+  ]
+}

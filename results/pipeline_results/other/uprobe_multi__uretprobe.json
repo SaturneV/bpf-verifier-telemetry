@@ -1,0 +1,249 @@
+{
+  "prog_name": "uretprobe",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/uprobe_multi.bpf.o",
+  "total_instructions_with_mismatches": 8,
+  "displayed": 8,
+  "total_mismatches_displayed": 18,
+  "instructions": [
+    {
+      "insn_idx": 51,
+      "byte_offset": 408,
+      "states_mismatched": 4,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 106,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 55,
+      "byte_offset": 440,
+      "states_mismatched": 3,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 176,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 64,
+      "byte_offset": 512,
+      "states_mismatched": 3,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 184,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 62,
+      "byte_offset": 496,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/uprobe_multi.c",
+        "line": 71,
+        "text": "SET(uretprobe_multi_func_3_result, uprobe_multi_func_3_addr, 1);"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 69,
+      "byte_offset": 552,
+      "states_mismatched": 2,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 190,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 72,
+      "byte_offset": 576,
+      "states_mismatched": 2,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 191,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 65,
+      "byte_offset": 520,
+      "states_mismatched": 1,
+      "source": {
+        "file": "tools/include/bpf/usdt.bpf.h",
+        "line": 187,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 78,
+      "byte_offset": 624,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/uprobe_multi.c",
+        "line": 116,
+        "text": "return 0;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "prog_name": "bpf_stats_pre_s",
+  "group": "other",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/profiler3.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

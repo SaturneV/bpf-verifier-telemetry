@@ -1,0 +1,149 @@
+{
+  "prog_name": "prog_nested_cal",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/bpf_loop.bpf.o",
+  "total_instructions_with_mismatches": 7,
+  "displayed": 7,
+  "total_mismatches_displayed": 26,
+  "instructions": [
+    {
+      "insn_idx": 99,
+      "byte_offset": 792,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 165,
+        "text": "int *val = bpf_map_lookup_elem(&map1, &key);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      2,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 71,
+      "byte_offset": 568,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 102,
+        "text": "err = bpf_loop(nr_loops, callback, &data, 1);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      5,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 107,
+      "byte_offset": 856,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 141,
+        "text": "if (bpf_get_current_pid_tgid() >> 32 != pid)"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 111,
+      "byte_offset": 888,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 141,
+        "text": "if (bpf_get_current_pid_tgid() >> 32 != pid)"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 80,
+      "byte_offset": 640,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 112,
+        "text": "if (bpf_get_current_pid_tgid() >> 32 != pid)"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 39,
+      "byte_offset": 312,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 165,
+        "text": "int *val = bpf_map_lookup_elem(&map1, &key);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        12,
+        "cbdepth":      7,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 50,
+      "byte_offset": 400,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_loop.c",
+        "line": 89,
+        "text": "nr_loops_returned = bpf_loop(nr_loops, empty_callback, NULL, 0);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

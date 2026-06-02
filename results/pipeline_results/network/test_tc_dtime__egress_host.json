@@ -1,0 +1,519 @@
+{
+  "prog_name": "egress_host",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_tc_dtime.bpf.o",
+  "total_instructions_with_mismatches": 17,
+  "displayed": 17,
+  "total_mismatches_displayed": 132,
+  "instructions": [
+    {
+      "insn_idx": 154,
+      "byte_offset": 1232,
+      "states_mismatched": 41,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 298,
+        "text": "skb_type = skb_get_type(skb);"
+      },
+      "mismatch_breakdown": {
+        "registers":   41,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      41,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 126,
+      "byte_offset": 1008,
+      "states_mismatched": 18,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 275,
+        "text": "if (skb_type == -1)"
+      },
+      "mismatch_breakdown": {
+        "registers":   18,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      9,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     9,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 140,
+      "byte_offset": 1120,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 94,
+        "text": "errs[test][idx]++;"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     8,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 61,
+      "byte_offset": 488,
+      "states_mismatched": 7,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 183,
+        "text": "switch (inet_proto) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 114,
+      "byte_offset": 912,
+      "states_mismatched": 7,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 93,
+        "text": "if (test < __NR_TESTS)"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      7,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 129,
+      "byte_offset": 1032,
+      "states_mismatched": 7,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 111,
+        "text": "return test == TCP_IP6_CLEAR_DTIME;"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 143,
+      "byte_offset": 1144,
+      "states_mismatched": 7,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 94,
+        "text": "errs[test][idx]++;"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      2
+      }
+    },
+    {
+      "insn_idx": 4,
+      "byte_offset": 32,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 219,
+        "text": "if (skb_type == -1)"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      6,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 115,
+      "byte_offset": 920,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 93,
+        "text": "if (test < __NR_TESTS)"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     1,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2,
+      "byte_offset": 16,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 139,
+        "text": "__u16 dst_ns_port = __bpf_htons(50000 + test);"
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 119,
+      "byte_offset": 952,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 266,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     3,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6,
+      "byte_offset": 48,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 150,
+        "text": "switch (skb->protocol) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 120,
+      "byte_offset": 960,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 271,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 134,
+      "byte_offset": 1072,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 283,
+        "text": "if (skb->tstamp == EGRESS_ENDHOST_MAGIC)"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 57,
+      "byte_offset": 456,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 237,
+        "text": "if (skb->tstamp_type == BPF_SKB_CLOCK_REALTIME &&"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 150,
+      "byte_offset": 1200,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 290,
+        "text": "}"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 146,
+      "byte_offset": 1168,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_tc_dtime.c",
+        "line": 94,
+        "text": "errs[test][idx]++;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "prog_name": "_xdp_adjust_tai",
+  "group": "network",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_xdp_adjust_tail_shrink.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

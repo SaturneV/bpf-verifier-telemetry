@@ -1,0 +1,9 @@
+{
+  "prog_name": "entry",
+  "group": "subprog",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/tailcall_bpf2bpf4.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

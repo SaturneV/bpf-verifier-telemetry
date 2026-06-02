@@ -1,0 +1,309 @@
+{
+  "prog_name": "bpf_sk_assign_t",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_sk_assign_libbpf.bpf.o",
+  "total_instructions_with_mismatches": 10,
+  "displayed": 10,
+  "total_mismatches_displayed": 24,
+  "instructions": [
+    {
+      "insn_idx": 46,
+      "byte_offset": 368,
+      "states_mismatched": 7,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 128,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      7,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 45,
+      "byte_offset": 360,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 128,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       2,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 3,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 25,
+      "byte_offset": 200,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 114,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     3,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 99,
+      "byte_offset": 792,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 149,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 102,
+      "byte_offset": 816,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 74,
+      "byte_offset": 592,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 93,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 80,
+      "byte_offset": 640,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 141,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     1,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 94,
+      "byte_offset": 752,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 146,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     1,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 121,
+      "byte_offset": 968,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 166,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 129,
+      "byte_offset": 1032,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_sk_assign.c",
+        "line": 110,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     1,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

@@ -1,0 +1,599 @@
+{
+  "prog_name": "num_fail_elem_c",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/iters_num.bpf.o",
+  "total_instructions_with_mismatches": 22,
+  "displayed": 22,
+  "total_mismatches_displayed": 404,
+  "instructions": [
+    {
+      "insn_idx": 49,
+      "byte_offset": 392,
+      "states_mismatched": 74,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 57,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        74,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 42,
+      "byte_offset": 336,
+      "states_mismatched": 44,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 47,
+        "text": "res_empty_int_max = 3 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   16,
+        "stack":        28,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      16,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 59,
+      "byte_offset": 472,
+      "states_mismatched": 42,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 61,
+        "text": "res_empty_minus_one = 4 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        42,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 34,
+      "byte_offset": 272,
+      "states_mismatched": 30,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 46,
+        "text": "bpf_for(i, INT_MAX, INT_MAX) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        18,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 52,
+      "byte_offset": 416,
+      "states_mismatched": 28,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 60,
+        "text": "bpf_for(i, -1, -1) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        21,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      7,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 31,
+      "byte_offset": 248,
+      "states_mismatched": 26,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 35,
+        "text": "return 0;"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        14,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 28,
+      "byte_offset": 224,
+      "states_mismatched": 22,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 33,
+        "text": "res_empty_int_min = 2 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        10,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 69,
+      "byte_offset": 552,
+      "states_mismatched": 21,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 74,
+        "text": "bpf_for(i, 0, 10) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        21,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 25,
+      "byte_offset": 200,
+      "states_mismatched": 18,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 32,
+        "text": "bpf_for(i, INT_MIN, INT_MIN) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 45,
+      "byte_offset": 360,
+      "states_mismatched": 16,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 47,
+        "text": "res_empty_int_max = 3 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   16,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      16,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 62,
+      "byte_offset": 496,
+      "states_mismatched": 15,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 63,
+        "text": "return 0;"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        10,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 22,
+      "byte_offset": 176,
+      "states_mismatched": 14,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 32,
+        "text": "bpf_for(i, INT_MIN, INT_MIN) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   11,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       11,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 54,
+      "byte_offset": 432,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 60,
+        "text": "bpf_for(i, -1, -1) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        12,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 19,
+      "byte_offset": 152,
+      "states_mismatched": 10,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 32,
+        "text": "bpf_for(i, INT_MIN, INT_MIN) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   9,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       9,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 64,
+      "byte_offset": 512,
+      "states_mismatched": 8,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 71,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        8,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 16,
+      "byte_offset": 128,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 29,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       6,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 72,
+      "byte_offset": 576,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 74,
+        "text": "bpf_for(i, 0, 10) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 74,
+      "byte_offset": 592,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 74,
+        "text": "bpf_for(i, 0, 10) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        4,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 13,
+      "byte_offset": 104,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 19,
+        "text": "res_empty_zero = 1 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       3,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 79,
+      "byte_offset": 632,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 74,
+        "text": "bpf_for(i, 0, 10) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 10,
+      "byte_offset": 80,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 19,
+        "text": "res_empty_zero = 1 + sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 81,
+      "byte_offset": 648,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters_num.c",
+        "line": 74,
+        "text": "bpf_for(i, 0, 10) sum += i;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

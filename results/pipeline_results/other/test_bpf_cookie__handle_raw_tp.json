@@ -1,0 +1,9 @@
+{
+  "prog_name": "handle_raw_tp",
+  "group": "other",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_bpf_cookie.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

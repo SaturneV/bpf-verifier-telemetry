@@ -1,0 +1,9 @@
+{
+  "prog_name": "syscall_prog",
+  "group": "map",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/struct_ops_id_ops_mapping2.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

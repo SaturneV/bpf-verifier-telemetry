@@ -1,0 +1,9 @@
+{
+  "prog_name": "test_sockops_up",
+  "group": "map",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_sockmap_mutate.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

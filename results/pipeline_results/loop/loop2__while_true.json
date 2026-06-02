@@ -1,0 +1,129 @@
+{
+  "prog_name": "while_true",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/loop2.bpf.o",
+  "total_instructions_with_mismatches": 4,
+  "displayed": 4,
+  "total_mismatches_displayed": 1323,
+  "instructions": [
+    {
+      "insn_idx": 2,
+      "byte_offset": 16,
+      "states_mismatched": 921,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/loop2.c",
+        "line": 15,
+        "text": "if (PT_REGS_RC(ctx) & 1)"
+      },
+      "mismatch_breakdown": {
+        "registers":   921,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      921,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6,
+      "byte_offset": 48,
+      "states_mismatched": 211,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/loop2.c",
+        "line": 15,
+        "text": "if (PT_REGS_RC(ctx) & 1)"
+      },
+      "mismatch_breakdown": {
+        "registers":   211,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      211,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9,
+      "byte_offset": 72,
+      "states_mismatched": 131,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/loop2.c",
+        "line": 15,
+        "text": "if (PT_REGS_RC(ctx) & 1)"
+      },
+      "mismatch_breakdown": {
+        "registers":   131,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      131,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4,
+      "byte_offset": 32,
+      "states_mismatched": 60,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/loop2.c",
+        "line": 19,
+        "text": "if (i > 40)"
+      },
+      "mismatch_breakdown": {
+        "registers":   60,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      60,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

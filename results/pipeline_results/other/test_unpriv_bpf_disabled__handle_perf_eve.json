@@ -1,0 +1,9 @@
+{
+  "prog_name": "handle_perf_eve",
+  "group": "other",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_unpriv_bpf_disabled.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

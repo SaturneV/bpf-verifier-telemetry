@@ -1,0 +1,1799 @@
+{
+  "prog_name": "on_event",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/pyperf600_bpf_loop.bpf.o",
+  "total_instructions_with_mismatches": 89,
+  "displayed": 89,
+  "total_mismatches_displayed": 374,
+  "instructions": [
+    {
+      "insn_idx": 1292,
+      "byte_offset": 10336,
+      "states_mismatched": 90,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   30,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      30,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1281,
+      "byte_offset": 10248,
+      "states_mismatched": 20,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1270,
+      "byte_offset": 10160,
+      "states_mismatched": 15,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 939,
+      "byte_offset": 7512,
+      "states_mismatched": 12,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 278,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        12,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1170,
+      "byte_offset": 9360,
+      "states_mismatched": 10,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1214,
+      "byte_offset": 9712,
+      "states_mismatched": 10,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1235,
+      "byte_offset": 9880,
+      "states_mismatched": 10,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1274,
+      "byte_offset": 10192,
+      "states_mismatched": 10,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 705,
+      "byte_offset": 5640,
+      "states_mismatched": 7,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 270,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        7,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 471,
+      "byte_offset": 3768,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 251,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 704,
+      "byte_offset": 5632,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 270,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 938,
+      "byte_offset": 7504,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 278,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 470,
+      "byte_offset": 3760,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 85,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        5,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1175,
+      "byte_offset": 9400,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1203,
+      "byte_offset": 9624,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1224,
+      "byte_offset": 9792,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1236,
+      "byte_offset": 9888,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1244,
+      "byte_offset": 9952,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1252,
+      "byte_offset": 10016,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1260,
+      "byte_offset": 10080,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1266,
+      "byte_offset": 10128,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1278,
+      "byte_offset": 10224,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 197,
+      "byte_offset": 1576,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 342,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        32,
+        "cbdepth":      8,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 431,
+      "byte_offset": 3448,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 240,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        32,
+        "cbdepth":      8,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 665,
+      "byte_offset": 5320,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 84,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        32,
+        "cbdepth":      8,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 899,
+      "byte_offset": 7192,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 265,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        32,
+        "cbdepth":      8,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1133,
+      "byte_offset": 9064,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        32,
+        "cbdepth":      8,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 237,
+      "byte_offset": 1896,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 241,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 493,
+      "byte_offset": 3944,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 263,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 502,
+      "byte_offset": 4016,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 265,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 514,
+      "byte_offset": 4112,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 524,
+      "byte_offset": 4192,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 546,
+      "byte_offset": 4368,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 281,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 727,
+      "byte_offset": 5816,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 736,
+      "byte_offset": 5888,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 279,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 748,
+      "byte_offset": 5984,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 282,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 758,
+      "byte_offset": 6064,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 285,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 929,
+      "byte_offset": 7432,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 961,
+      "byte_offset": 7688,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 288,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 970,
+      "byte_offset": 7760,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 296,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 982,
+      "byte_offset": 7856,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 337,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 992,
+      "byte_offset": 7936,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 342,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1014,
+      "byte_offset": 8112,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 343,
+      "byte_offset": 2744,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 276,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 461,
+      "byte_offset": 3688,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 84,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 577,
+      "byte_offset": 4616,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 332,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 695,
+      "byte_offset": 5560,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 263,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 791,
+      "byte_offset": 6328,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 339,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 797,
+      "byte_offset": 6376,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 342,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 811,
+      "byte_offset": 6488,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 226,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1019,
+      "byte_offset": 8152,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 227,
+      "byte_offset": 1816,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 238,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 236,
+      "byte_offset": 1888,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 240,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 259,
+      "byte_offset": 2072,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 84,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 268,
+      "byte_offset": 2144,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 83,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 280,
+      "byte_offset": 2240,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 255,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 290,
+      "byte_offset": 2320,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 264,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 298,
+      "byte_offset": 2384,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 261,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 312,
+      "byte_offset": 2496,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 314,
+      "byte_offset": 2512,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 323,
+      "byte_offset": 2584,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 338,
+      "byte_offset": 2704,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 278,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 346,
+      "byte_offset": 2768,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 281,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 347,
+      "byte_offset": 2776,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 281,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 385,
+      "byte_offset": 3080,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 334,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 457,
+      "byte_offset": 3656,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 82,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 482,
+      "byte_offset": 3856,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 270,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 532,
+      "byte_offset": 4256,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 274,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 548,
+      "byte_offset": 4384,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 282,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 557,
+      "byte_offset": 4456,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 285,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 572,
+      "byte_offset": 4576,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 296,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 580,
+      "byte_offset": 4640,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 332,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 581,
+      "byte_offset": 4648,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 332,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 619,
+      "byte_offset": 4952,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 231,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 691,
+      "byte_offset": 5528,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 264,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 716,
+      "byte_offset": 5728,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 766,
+      "byte_offset": 6128,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 295,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 780,
+      "byte_offset": 6240,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 332,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 782,
+      "byte_offset": 6256,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 334,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 815,
+      "byte_offset": 6520,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 230,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 853,
+      "byte_offset": 6824,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 82,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 914,
+      "byte_offset": 7312,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 273,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 950,
+      "byte_offset": 7600,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 285,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1000,
+      "byte_offset": 8000,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1016,
+      "byte_offset": 8128,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1031,
+      "byte_offset": 8248,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1045,
+      "byte_offset": 8360,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1049,
+      "byte_offset": 8392,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1087,
+      "byte_offset": 8696,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/pyperf.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        1,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

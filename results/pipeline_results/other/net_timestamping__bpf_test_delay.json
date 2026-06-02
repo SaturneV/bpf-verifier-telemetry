@@ -1,0 +1,9 @@
+{
+  "prog_name": "bpf_test_delay",
+  "group": "other",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/net_timestamping.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

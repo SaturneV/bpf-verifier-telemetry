@@ -1,0 +1,199 @@
+{
+  "prog_name": "bpf_loop_iter_l",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_iterating_callbacks.bpf.o",
+  "total_instructions_with_mismatches": 8,
+  "displayed": 8,
+  "total_mismatches_displayed": 294,
+  "instructions": [
+    {
+      "insn_idx": 54,
+      "byte_offset": 432,
+      "states_mismatched": 94,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 315,
+        "text": "asm volatile (\"\t\t\t\\"
+      },
+      "mismatch_breakdown": {
+        "registers":   9,
+        "stack":        217,
+        "cbdepth":      16,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     9,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 124,
+      "byte_offset": 992,
+      "states_mismatched": 76,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 484,
+        "text": "cond_break;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 100,
+      "byte_offset": 800,
+      "states_mismatched": 31,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 493,
+        "text": "for (i = zero; i <= 1000000 && can_loop; i++)"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 132,
+      "byte_offset": 1056,
+      "states_mismatched": 31,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 486,
+        "text": "return sum;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 65,
+      "byte_offset": 520,
+      "states_mismatched": 30,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 381,
+        "text": "asm volatile (\"\t\t\t\\"
+      },
+      "mismatch_breakdown": {
+        "registers":   30,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      30,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 127,
+      "byte_offset": 1016,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 185,
+        "text": "struct num_context ctx = { .i = 0 };"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 29,
+      "byte_offset": 232,
+      "states_mismatched": 10,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 80,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        18,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 73,
+      "byte_offset": 584,
+      "states_mismatched": 10,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_iterating_callbacks.c",
+        "line": 131,
+        "text": "return choice_arr[loop_ctx.i];"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

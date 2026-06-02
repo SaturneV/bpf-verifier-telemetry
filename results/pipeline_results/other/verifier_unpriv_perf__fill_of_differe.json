@@ -1,0 +1,29 @@
+{
+  "prog_name": "fill_of_differe",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_unpriv_perf.bpf.o",
+  "total_instructions_with_mismatches": 1,
+  "displayed": 1,
+  "total_mismatches_displayed": 2,
+  "instructions": [
+    {
+      "insn_idx": 8,
+      "byte_offset": 64,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_unpriv_perf.c",
+        "line": 13,
+        "text": "asm volatile (\"\t\t\t\t\t\\"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

@@ -1,0 +1,1199 @@
+{
+  "prog_name": "balancer_ingres",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_l4lb_noinline.bpf.o",
+  "total_instructions_with_mismatches": 45,
+  "displayed": 45,
+  "total_mismatches_displayed": 1090,
+  "instructions": [
+    {
+      "insn_idx": 224,
+      "byte_offset": 1792,
+      "states_mismatched": 114,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 430,
+        "text": "memcpy(tkey.remote_ipv6, dst->dstv6, 16);"
+      },
+      "mismatch_breakdown": {
+        "registers":   74,
+        "stack":        40,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      12,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      62
+      }
+    },
+    {
+      "insn_idx": 473,
+      "byte_offset": 3784,
+      "states_mismatched": 114,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 428,
+      "byte_offset": 3424,
+      "states_mismatched": 106,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 235,
+      "byte_offset": 1880,
+      "states_mismatched": 57,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 433,
+        "text": "cval = bpf_map_lookup_elem(&ctl_array, &v4_intf_pos);"
+      },
+      "mismatch_breakdown": {
+        "registers":   57,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      35,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      22
+      }
+    },
+    {
+      "insn_idx": 158,
+      "byte_offset": 1264,
+      "states_mismatched": 55,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 404,
+        "text": "memcpy(vip.daddr.v6, pckt.dstv6, 16);"
+      },
+      "mismatch_breakdown": {
+        "registers":   51,
+        "stack":        4,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      33,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      18
+      }
+    },
+    {
+      "insn_idx": 173,
+      "byte_offset": 1384,
+      "states_mismatched": 55,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 410,
+        "text": "vip_info = bpf_map_lookup_elem(&vip_map, &vip);"
+      },
+      "mismatch_breakdown": {
+        "registers":   51,
+        "stack":        4,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      30,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      21
+      }
+    },
+    {
+      "insn_idx": 471,
+      "byte_offset": 3768,
+      "states_mismatched": 45,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 219,
+      "byte_offset": 1752,
+      "states_mismatched": 44,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 427,
+        "text": "if (!cval)"
+      },
+      "mismatch_breakdown": {
+        "registers":   44,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      20,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      24
+      }
+    },
+    {
+      "insn_idx": 154,
+      "byte_offset": 1232,
+      "states_mismatched": 33,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 404,
+        "text": "memcpy(vip.daddr.v6, pckt.dstv6, 16);"
+      },
+      "mismatch_breakdown": {
+        "registers":   31,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      16,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      15
+      }
+    },
+    {
+      "insn_idx": 285,
+      "byte_offset": 2280,
+      "states_mismatched": 32,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 246,
+        "text": "if (ip6h + 1 > data_end)"
+      },
+      "mismatch_breakdown": {
+        "registers":   26,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      26
+      }
+    },
+    {
+      "insn_idx": 169,
+      "byte_offset": 1352,
+      "states_mismatched": 29,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 409,
+        "text": "vip.protocol = pckt.proto;"
+      },
+      "mismatch_breakdown": {
+        "registers":   26,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      12,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      14
+      }
+    },
+    {
+      "insn_idx": 300,
+      "byte_offset": 2400,
+      "states_mismatched": 28,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 251,
+        "text": "memcpy(pckt->dstv6, ip6h->saddr.s6_addr32, 16);"
+      },
+      "mismatch_breakdown": {
+        "registers":   28,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      28
+      }
+    },
+    {
+      "insn_idx": 453,
+      "byte_offset": 3624,
+      "states_mismatched": 28,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 403,
+      "byte_offset": 3224,
+      "states_mismatched": 26,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 226,
+        "text": "key = *real_pos;"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     6,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 405,
+      "byte_offset": 3240,
+      "states_mismatched": 23,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 227,
+        "text": "*real = bpf_map_lookup_elem(&reals, &key);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 191,
+      "byte_offset": 1528,
+      "states_mismatched": 22,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 419,
+        "text": "if (vip_info->flags & F_HASH_NO_SRC_PORT)"
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      16,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      6
+      }
+    },
+    {
+      "insn_idx": 213,
+      "byte_offset": 1704,
+      "states_mismatched": 22,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 425,
+        "text": "if (dst->flags & F_IPV6) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      10,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      12
+      }
+    },
+    {
+      "insn_idx": 479,
+      "byte_offset": 3832,
+      "states_mismatched": 18,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 482,
+      "byte_offset": 3856,
+      "states_mismatched": 18,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 81,
+        "text": "__jhash_final(a, b, c);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 422,
+      "byte_offset": 3376,
+      "states_mismatched": 16,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 100,
+        "text": "return __jhash_nwords(a, b, 0, initval + JHASH_INITVAL + (2 << 2));"
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 316,
+      "byte_offset": 2528,
+      "states_mismatched": 15,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 264,
+        "text": "if (icmp_hdr->type != ICMP_DEST_UNREACH ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   15,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      15
+      }
+    },
+    {
+      "insn_idx": 424,
+      "byte_offset": 3392,
+      "states_mismatched": 15,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 63,
+        "text": "c += *(u32 *)(k + 8);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 467,
+      "byte_offset": 3736,
+      "states_mismatched": 15,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 64,
+        "text": "__jhash_mix(a, b, c);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 251,
+      "byte_offset": 2008,
+      "states_mismatched": 14,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 440,
+        "text": "data_stats = bpf_map_lookup_elem(&stats, &vip_num);"
+      },
+      "mismatch_breakdown": {
+        "registers":   14,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      14
+      }
+    },
+    {
+      "insn_idx": 440,
+      "byte_offset": 3520,
+      "states_mismatched": 14,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 62,
+        "text": "b += *(u32 *)(k + 4);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 600,
+      "byte_offset": 4800,
+      "states_mismatched": 14,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 95,
+        "text": "return c;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 174,
+      "byte_offset": 1392,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 410,
+        "text": "vip_info = bpf_map_lookup_elem(&vip_map, &vip);"
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      8,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      4
+      }
+    },
+    {
+      "insn_idx": 408,
+      "byte_offset": 3264,
+      "states_mismatched": 12,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 227,
+        "text": "*real = bpf_map_lookup_elem(&reals, &key);"
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 277,
+      "byte_offset": 2216,
+      "states_mismatched": 10,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 240,
+        "text": "if (icmp_hdr + 1 > data_end)"
+      },
+      "mismatch_breakdown": {
+        "registers":   10,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      10
+      }
+    },
+    {
+      "insn_idx": 401,
+      "byte_offset": 3208,
+      "states_mismatched": 9,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 226,
+        "text": "key = *real_pos;"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 427,
+      "byte_offset": 3416,
+      "states_mismatched": 9,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 63,
+        "text": "c += *(u32 *)(k + 8);"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 112,
+      "byte_offset": 896,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 387,
+        "text": "pckt.src = iph->saddr;"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      3
+      }
+    },
+    {
+      "insn_idx": 141,
+      "byte_offset": 1128,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 397,
+        "text": "if (!parse_udp(data, off, data_end, &pckt))"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      5
+      }
+    },
+    {
+      "insn_idx": 153,
+      "byte_offset": 1224,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 403,
+        "text": "if (is_ipv6)"
+      },
+      "mismatch_breakdown": {
+        "registers":   67,
+        "stack":        7,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      25,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      42
+      }
+    },
+    {
+      "insn_idx": 168,
+      "byte_offset": 1344,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 408,
+        "text": "vip.dport = pckt.port16[1];"
+      },
+      "mismatch_breakdown": {
+        "registers":   42,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      13,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      29
+      }
+    },
+    {
+      "insn_idx": 202,
+      "byte_offset": 1616,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 422,
+        "text": "if (!get_packet_dst(&dst, &pckt, vip_info, is_ipv6))"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      6
+      }
+    },
+    {
+      "insn_idx": 392,
+      "byte_offset": 3136,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 219,
+        "text": "if (hash != 0x358459b7 /* jhash of ipv4 packet */  &&"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 476,
+      "byte_offset": 3808,
+      "states_mismatched": 6,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 22,
+        "text": "return (word << shift) | (word >> ((-shift) & 31));"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 279,
+      "byte_offset": 2232,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 240,
+        "text": "if (icmp_hdr + 1 > data_end)"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      5
+      }
+    },
+    {
+      "insn_idx": 384,
+      "byte_offset": 3072,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 215,
+        "text": "__u32 hash = get_packet_hash(pckt, is_ipv6);"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 420,
+      "byte_offset": 3360,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 207,
+        "text": "return jhash_2words(pckt->src, pckt->ports, CH_RINGS_SIZE);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 69,
+      "byte_offset": 552,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 379,
+        "text": "if (iph->frag_off & PCKT_FRAGMENTED)"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 76,
+      "byte_offset": 608,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 381,
+        "text": "if (protocol == IPPROTO_ICMP) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      1
+      }
+    },
+    {
+      "insn_idx": 395,
+      "byte_offset": 3160,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 219,
+        "text": "if (hash != 0x358459b7 /* jhash of ipv4 packet */  &&"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 47,
+      "byte_offset": 376,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_l4lb_noinline.c",
+        "line": 359,
+        "text": "action = parse_icmpv6(data, data_end, off, &pckt);"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

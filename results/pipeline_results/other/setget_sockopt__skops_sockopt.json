@@ -1,0 +1,699 @@
+{
+  "prog_name": "skops_sockopt",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/setget_sockopt.bpf.o",
+  "total_instructions_with_mismatches": 29,
+  "displayed": 29,
+  "total_mismatches_displayed": 2156,
+  "instructions": [
+    {
+      "insn_idx": 830,
+      "byte_offset": 6640,
+      "states_mismatched": 573,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   135,
+        "stack":        15,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     247
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      135,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 813,
+      "byte_offset": 6504,
+      "states_mismatched": 210,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   60,
+        "stack":        30,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     60
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      60,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 803,
+      "byte_offset": 6424,
+      "states_mismatched": 200,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   30,
+        "stack":        17,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     88
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      30,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 795,
+      "byte_offset": 6360,
+      "states_mismatched": 199,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   43,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     84
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      43,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 886,
+      "byte_offset": 7088,
+      "states_mismatched": 130,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     78
+      }
+    },
+    {
+      "insn_idx": 826,
+      "byte_offset": 6608,
+      "states_mismatched": 108,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        15,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     54
+      }
+    },
+    {
+      "insn_idx": 841,
+      "byte_offset": 6728,
+      "states_mismatched": 80,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     48
+      }
+    },
+    {
+      "insn_idx": 783,
+      "byte_offset": 6264,
+      "states_mismatched": 79,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   15,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     36
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      15,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 792,
+      "byte_offset": 6336,
+      "states_mismatched": 79,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   15,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     36
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      15,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 776,
+      "byte_offset": 6208,
+      "states_mismatched": 63,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     39
+      }
+    },
+    {
+      "insn_idx": 787,
+      "byte_offset": 6296,
+      "states_mismatched": 52,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     32
+      }
+    },
+    {
+      "insn_idx": 773,
+      "byte_offset": 6184,
+      "states_mismatched": 50,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     30
+      }
+    },
+    {
+      "insn_idx": 851,
+      "byte_offset": 6808,
+      "states_mismatched": 40,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     24
+      }
+    },
+    {
+      "insn_idx": 862,
+      "byte_offset": 6896,
+      "states_mismatched": 40,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     24
+      }
+    },
+    {
+      "insn_idx": 870,
+      "byte_offset": 6960,
+      "states_mismatched": 40,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     24
+      }
+    },
+    {
+      "insn_idx": 884,
+      "byte_offset": 7072,
+      "states_mismatched": 40,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     24
+      }
+    },
+    {
+      "insn_idx": 840,
+      "byte_offset": 6720,
+      "states_mismatched": 39,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     24
+      }
+    },
+    {
+      "insn_idx": 793,
+      "byte_offset": 6344,
+      "states_mismatched": 35,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     18
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 877,
+      "byte_offset": 7016,
+      "states_mismatched": 20,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     12
+      }
+    },
+    {
+      "insn_idx": 982,
+      "byte_offset": 7856,
+      "states_mismatched": 20,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   20,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      20,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 770,
+      "byte_offset": 6160,
+      "states_mismatched": 16,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     10
+      }
+    },
+    {
+      "insn_idx": 720,
+      "byte_offset": 5760,
+      "states_mismatched": 11,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   11,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     11,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 765,
+      "byte_offset": 6120,
+      "states_mismatched": 10,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     6
+      }
+    },
+    {
+      "insn_idx": 775,
+      "byte_offset": 6200,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     3
+      }
+    },
+    {
+      "insn_idx": 938,
+      "byte_offset": 7504,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     5,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 948,
+      "byte_offset": 7584,
+      "states_mismatched": 5,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     5,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 767,
+      "byte_offset": 6136,
+      "states_mismatched": 4,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     2
+      }
+    },
+    {
+      "insn_idx": 636,
+      "byte_offset": 5088,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 838,
+      "byte_offset": 6704,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/setget_sockopt.c",
+        "line": 415,
+        "text": "nr_active += !(bpf_test_sockopt(skops, sk) ||"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

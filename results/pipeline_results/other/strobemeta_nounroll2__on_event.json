@@ -1,0 +1,1179 @@
+{
+  "prog_name": "on_event",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/strobemeta_nounroll2.bpf.o",
+  "total_instructions_with_mismatches": 39,
+  "displayed": 39,
+  "total_mismatches_displayed": 89707,
+  "instructions": [
+    {
+      "insn_idx": 252,
+      "byte_offset": 2016,
+      "states_mismatched": 20660,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 295,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   20660,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      234,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     20426,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 221,
+      "byte_offset": 1768,
+      "states_mismatched": 17686,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 433,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   17686,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      237,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     17449,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 232,
+      "byte_offset": 1856,
+      "states_mismatched": 17252,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 440,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   17252,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      32,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     17220,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 245,
+      "byte_offset": 1960,
+      "states_mismatched": 13331,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 399,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   13331,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      131,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     13200,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 224,
+      "byte_offset": 1792,
+      "states_mismatched": 8812,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 436,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   8812,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     8812,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 241,
+      "byte_offset": 1928,
+      "states_mismatched": 5985,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 394,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   5985,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      93,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     5892,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 225,
+      "byte_offset": 1800,
+      "states_mismatched": 2707,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 437,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   72,
+        "stack":        2635,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      72,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 191,
+      "byte_offset": 1528,
+      "states_mismatched": 439,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 585,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   439,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      439,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 275,
+      "byte_offset": 2200,
+      "states_mismatched": 295,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 327,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   295,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     294,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 149,
+      "byte_offset": 1192,
+      "states_mismatched": 290,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 320,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   290,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      290,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 162,
+      "byte_offset": 1296,
+      "states_mismatched": 282,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 327,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   282,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     282,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 257,
+      "byte_offset": 2056,
+      "states_mismatched": 252,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 321,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   252,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      252,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 321,
+      "byte_offset": 2568,
+      "states_mismatched": 252,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 594,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   252,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      130,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     122,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 292,
+      "byte_offset": 2336,
+      "states_mismatched": 220,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 407,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   220,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     220,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 335,
+      "byte_offset": 2680,
+      "states_mismatched": 198,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 617,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        196,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 180,
+      "byte_offset": 1440,
+      "states_mismatched": 186,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 373,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   186,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      186,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 302,
+      "byte_offset": 2416,
+      "states_mismatched": 182,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 412,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   182,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     182,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 197,
+      "byte_offset": 1576,
+      "states_mismatched": 160,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 585,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   160,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      160,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 190,
+      "byte_offset": 1520,
+      "states_mismatched": 147,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 585,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   147,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      147,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 288,
+      "byte_offset": 2304,
+      "states_mismatched": 110,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 406,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   110,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     110,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 176,
+      "byte_offset": 1408,
+      "states_mismatched": 93,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 369,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   93,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      93,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 146,
+      "byte_offset": 1168,
+      "states_mismatched": 56,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 321,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   56,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      56,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 280,
+      "byte_offset": 2240,
+      "states_mismatched": 28,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 333,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   28,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     28,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 155,
+      "byte_offset": 1240,
+      "states_mismatched": 20,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 325,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   20,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     20,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 202,
+      "byte_offset": 1616,
+      "states_mismatched": 15,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 585,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   15,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      15,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 308,
+      "byte_offset": 2464,
+      "states_mismatched": 14,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 417,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   14,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     14,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 233,
+      "byte_offset": 1864,
+      "states_mismatched": 13,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 440,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   13,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     13,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 148,
+      "byte_offset": 1184,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 320,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 355,
+      "byte_offset": 2840,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 631,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      1
+      }
+    },
+    {
+      "insn_idx": 360,
+      "byte_offset": 2880,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 631,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      2
+      }
+    },
+    {
+      "insn_idx": 115,
+      "byte_offset": 920,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 353,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 185,
+      "byte_offset": 1480,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 384,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 230,
+      "byte_offset": 1840,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 440,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 365,
+      "byte_offset": 2920,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 633,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       2,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 103,
+      "byte_offset": 824,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 333,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 111,
+      "byte_offset": 888,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 352,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 125,
+      "byte_offset": 1000,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 355,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 192,
+      "byte_offset": 1536,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 585,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 351,
+      "byte_offset": 2808,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/strobemeta.h",
+        "line": 628,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      1
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "prog_name": "dump_task_stack",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/bpf_iter_task_stack.bpf.o",
+  "total_instructions_with_mismatches": 3,
+  "displayed": 3,
+  "total_mismatches_displayed": 11451,
+  "instructions": [
+    {
+      "insn_idx": 29,
+      "byte_offset": 232,
+      "states_mismatched": 7683,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_iter_task_stack.c",
+        "line": 29,
+        "text": "for (i = 0; i < MAX_STACK_TRACE_DEPTH; i++) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   7683,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      7683,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 40,
+      "byte_offset": 320,
+      "states_mismatched": 3394,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_iter_task_stack.c",
+        "line": 30,
+        "text": "if (retlen > i * SIZE_OF_ULONG)"
+      },
+      "mismatch_breakdown": {
+        "registers":   3394,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3394,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 30,
+      "byte_offset": 240,
+      "states_mismatched": 374,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/bpf_iter_task_stack.c",
+        "line": 29,
+        "text": "for (i = 0; i < MAX_STACK_TRACE_DEPTH; i++) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   374,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      374,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

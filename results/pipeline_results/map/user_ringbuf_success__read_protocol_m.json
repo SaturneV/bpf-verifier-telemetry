@@ -1,0 +1,9 @@
+{
+  "prog_name": "read_protocol_m",
+  "group": "map",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/user_ringbuf_success.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

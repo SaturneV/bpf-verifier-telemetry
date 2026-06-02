@@ -1,0 +1,9 @@
+{
+  "prog_name": "fentry_udp_init",
+  "group": "network",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/sk_bypass_prot_mem.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

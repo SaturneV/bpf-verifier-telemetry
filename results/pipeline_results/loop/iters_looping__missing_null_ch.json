@@ -1,0 +1,9 @@
+{
+  "prog_name": "missing_null_ch",
+  "group": "loop",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/iters_looping.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

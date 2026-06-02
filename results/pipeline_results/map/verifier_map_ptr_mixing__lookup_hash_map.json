@@ -1,0 +1,39 @@
+{
+  "prog_name": "lookup_hash_map",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_map_ptr_mixing.bpf.o",
+  "total_instructions_with_mismatches": 1,
+  "displayed": 1,
+  "total_mismatches_displayed": 2,
+  "instructions": [
+    {
+      "insn_idx": 10,
+      "byte_offset": 80,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/verifier_map_ptr_mixing.c",
+        "line": 107,
+        "text": "asm volatile (\"\t\t\t\\"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      0,
+        "var_off":    0,
+        "id":         2,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

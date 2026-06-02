@@ -1,0 +1,9 @@
+{
+  "prog_name": "add_to_list_in_",
+  "group": "map",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/mmap_inner_array.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

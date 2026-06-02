@@ -1,0 +1,129 @@
+{
+  "prog_name": "xdp_ingress_v6",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_parse_tcp_hdr_opt_dynptr.bpf.o",
+  "total_instructions_with_mismatches": 4,
+  "displayed": 4,
+  "total_mismatches_displayed": 153,
+  "instructions": [
+    {
+      "insn_idx": 66,
+      "byte_offset": 528,
+      "states_mismatched": 93,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_parse_tcp_hdr_opt_dynptr.c",
+        "line": 65,
+        "text": "__builtin_memcpy(server_id, (__u32 *)(data + 2), sizeof(*server_id));"
+      },
+      "mismatch_breakdown": {
+        "registers":   93,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      93,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 59,
+      "byte_offset": 472,
+      "states_mismatched": 37,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_parse_tcp_hdr_opt_dynptr.c",
+        "line": 61,
+        "text": "if (kind == tcp_hdr_opt_kind_tpr) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   37,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      37,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 27,
+      "byte_offset": 216,
+      "states_mismatched": 21,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_parse_tcp_hdr_opt_dynptr.c",
+        "line": 95,
+        "text": "if (tcp_hdr_opt_len < tcp_hdr_opt_len_tpr)"
+      },
+      "mismatch_breakdown": {
+        "registers":   21,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      21,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 29,
+      "byte_offset": 232,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/test_parse_tcp_hdr_opt_dynptr.c",
+        "line": 106,
+        "text": "if (err || !hdr_bytes_remaining)"
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

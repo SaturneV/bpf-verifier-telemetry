@@ -1,0 +1,49 @@
+{
+  "prog_name": "test_pkt_access",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/for_each_array_map_elem.bpf.o",
+  "total_instructions_with_mismatches": 2,
+  "displayed": 2,
+  "total_mismatches_displayed": 2,
+  "instructions": [
+    {
+      "insn_idx": 9,
+      "byte_offset": 72,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/for_each_array_map_elem.c",
+        "line": 31,
+        "text": "{"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 26,
+      "byte_offset": 208,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/for_each_array_map_elem.c",
+        "line": 71,
+        "text": "bpf_for_each_map_elem(&percpu_map, check_percpu_elem, (void *)0, 0);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    }
+  ]
+}

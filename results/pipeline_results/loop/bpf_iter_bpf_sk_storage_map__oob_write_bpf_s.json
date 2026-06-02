@@ -1,0 +1,9 @@
+{
+  "prog_name": "oob_write_bpf_s",
+  "group": "loop",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/bpf_iter_bpf_sk_storage_map.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

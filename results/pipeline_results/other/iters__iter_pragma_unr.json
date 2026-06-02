@@ -1,0 +1,69 @@
+{
+  "prog_name": "iter_pragma_unr",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/iters.bpf.o",
+  "total_instructions_with_mismatches": 2,
+  "displayed": 2,
+  "total_mismatches_displayed": 20,
+  "instructions": [
+    {
+      "insn_idx": 21,
+      "byte_offset": 168,
+      "states_mismatched": 11,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 106,
+        "text": "return 0;"
+      },
+      "mismatch_breakdown": {
+        "registers":   9,
+        "stack":        2,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      9,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 13,
+      "byte_offset": 104,
+      "states_mismatched": 9,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 102,
+        "text": "bpf_printk(\"ITER_BASIC: E1 VAL: v=%d\", *v);"
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      6,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

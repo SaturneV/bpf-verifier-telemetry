@@ -1,0 +1,9 @@
+{
+  "prog_name": "write_sk_pacing",
+  "group": "network",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/tcp_ca_write_sk_pacing.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

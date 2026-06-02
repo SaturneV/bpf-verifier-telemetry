@@ -1,0 +1,2679 @@
+{
+  "prog_name": "balancer_ingres",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/core_kern.bpf.o",
+  "total_instructions_with_mismatches": 89,
+  "displayed": 89,
+  "total_mismatches_displayed": 25764,
+  "instructions": [
+    {
+      "insn_idx": 11746,
+      "byte_offset": 93968,
+      "states_mismatched": 597,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   597,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      597,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 11614,
+      "byte_offset": 92912,
+      "states_mismatched": 590,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   590,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      590,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 11482,
+      "byte_offset": 91856,
+      "states_mismatched": 583,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   583,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      583,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 11350,
+      "byte_offset": 90800,
+      "states_mismatched": 576,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   576,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      576,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 11218,
+      "byte_offset": 89744,
+      "states_mismatched": 569,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   569,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      569,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 11086,
+      "byte_offset": 88688,
+      "states_mismatched": 562,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   562,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      562,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10954,
+      "byte_offset": 87632,
+      "states_mismatched": 555,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   555,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      555,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10822,
+      "byte_offset": 86576,
+      "states_mismatched": 548,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   548,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      548,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10690,
+      "byte_offset": 85520,
+      "states_mismatched": 541,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   541,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      541,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10558,
+      "byte_offset": 84464,
+      "states_mismatched": 534,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 62,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   534,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      534,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10426,
+      "byte_offset": 83408,
+      "states_mismatched": 527,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   527,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      527,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10294,
+      "byte_offset": 82352,
+      "states_mismatched": 520,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   520,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      520,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10162,
+      "byte_offset": 81296,
+      "states_mismatched": 513,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   513,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      513,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 10030,
+      "byte_offset": 80240,
+      "states_mismatched": 506,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   506,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      506,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9898,
+      "byte_offset": 79184,
+      "states_mismatched": 499,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   499,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      499,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9766,
+      "byte_offset": 78128,
+      "states_mismatched": 492,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   492,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      492,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9634,
+      "byte_offset": 77072,
+      "states_mismatched": 485,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   485,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      485,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9502,
+      "byte_offset": 76016,
+      "states_mismatched": 478,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   478,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      478,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9370,
+      "byte_offset": 74960,
+      "states_mismatched": 471,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   471,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      471,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9238,
+      "byte_offset": 73904,
+      "states_mismatched": 464,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   464,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      464,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 9106,
+      "byte_offset": 72848,
+      "states_mismatched": 457,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   457,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      457,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8974,
+      "byte_offset": 71792,
+      "states_mismatched": 450,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   450,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      450,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8842,
+      "byte_offset": 70736,
+      "states_mismatched": 443,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 45,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   443,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      443,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8710,
+      "byte_offset": 69680,
+      "states_mismatched": 436,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   436,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      436,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8578,
+      "byte_offset": 68624,
+      "states_mismatched": 429,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   429,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      429,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8446,
+      "byte_offset": 67568,
+      "states_mismatched": 422,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   422,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      422,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8314,
+      "byte_offset": 66512,
+      "states_mismatched": 415,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   415,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      415,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8182,
+      "byte_offset": 65456,
+      "states_mismatched": 408,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   408,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      408,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 8050,
+      "byte_offset": 64400,
+      "states_mismatched": 401,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   401,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      401,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7918,
+      "byte_offset": 63344,
+      "states_mismatched": 394,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   394,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      394,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7786,
+      "byte_offset": 62288,
+      "states_mismatched": 387,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   387,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      387,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7654,
+      "byte_offset": 61232,
+      "states_mismatched": 380,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   380,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      380,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7522,
+      "byte_offset": 60176,
+      "states_mismatched": 373,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 62,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   373,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      373,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7390,
+      "byte_offset": 59120,
+      "states_mismatched": 366,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   366,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      366,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7258,
+      "byte_offset": 58064,
+      "states_mismatched": 359,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   359,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      359,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 7126,
+      "byte_offset": 57008,
+      "states_mismatched": 352,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   352,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      352,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6994,
+      "byte_offset": 55952,
+      "states_mismatched": 345,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   345,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      345,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6862,
+      "byte_offset": 54896,
+      "states_mismatched": 338,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   338,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      338,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6730,
+      "byte_offset": 53840,
+      "states_mismatched": 331,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   331,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      331,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6598,
+      "byte_offset": 52784,
+      "states_mismatched": 324,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   324,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      324,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6466,
+      "byte_offset": 51728,
+      "states_mismatched": 317,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   317,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      317,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6334,
+      "byte_offset": 50672,
+      "states_mismatched": 310,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   310,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      310,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6202,
+      "byte_offset": 49616,
+      "states_mismatched": 303,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   303,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      303,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 6070,
+      "byte_offset": 48560,
+      "states_mismatched": 296,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   296,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      296,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5938,
+      "byte_offset": 47504,
+      "states_mismatched": 289,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   289,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      289,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5806,
+      "byte_offset": 46448,
+      "states_mismatched": 282,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 45,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   282,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      282,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5674,
+      "byte_offset": 45392,
+      "states_mismatched": 275,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   275,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      275,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5542,
+      "byte_offset": 44336,
+      "states_mismatched": 268,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   268,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      268,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5410,
+      "byte_offset": 43280,
+      "states_mismatched": 261,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   261,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      261,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5278,
+      "byte_offset": 42224,
+      "states_mismatched": 254,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   254,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      254,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5146,
+      "byte_offset": 41168,
+      "states_mismatched": 247,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   247,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      247,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 5014,
+      "byte_offset": 40112,
+      "states_mismatched": 240,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   240,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      240,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4882,
+      "byte_offset": 39056,
+      "states_mismatched": 233,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   233,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      233,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4750,
+      "byte_offset": 38000,
+      "states_mismatched": 226,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   226,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      226,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4618,
+      "byte_offset": 36944,
+      "states_mismatched": 219,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   219,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      219,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4486,
+      "byte_offset": 35888,
+      "states_mismatched": 212,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 62,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   212,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      212,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4354,
+      "byte_offset": 34832,
+      "states_mismatched": 205,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   205,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      205,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4222,
+      "byte_offset": 33776,
+      "states_mismatched": 198,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   198,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      198,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 4090,
+      "byte_offset": 32720,
+      "states_mismatched": 191,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   191,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      191,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3958,
+      "byte_offset": 31664,
+      "states_mismatched": 184,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   184,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      184,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3826,
+      "byte_offset": 30608,
+      "states_mismatched": 177,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   177,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      177,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3694,
+      "byte_offset": 29552,
+      "states_mismatched": 170,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   170,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      170,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3562,
+      "byte_offset": 28496,
+      "states_mismatched": 163,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   163,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      163,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3430,
+      "byte_offset": 27440,
+      "states_mismatched": 156,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   156,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      156,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3298,
+      "byte_offset": 26384,
+      "states_mismatched": 149,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   149,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      149,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3166,
+      "byte_offset": 25328,
+      "states_mismatched": 142,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   142,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      142,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 3034,
+      "byte_offset": 24272,
+      "states_mismatched": 135,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   135,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      135,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2902,
+      "byte_offset": 23216,
+      "states_mismatched": 128,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   128,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      128,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2770,
+      "byte_offset": 22160,
+      "states_mismatched": 121,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 45,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   121,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      121,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2638,
+      "byte_offset": 21104,
+      "states_mismatched": 114,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   114,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      114,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2506,
+      "byte_offset": 20048,
+      "states_mismatched": 107,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   107,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      107,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2374,
+      "byte_offset": 18992,
+      "states_mismatched": 100,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   100,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      100,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2242,
+      "byte_offset": 17936,
+      "states_mismatched": 93,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   93,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      93,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 2110,
+      "byte_offset": 16880,
+      "states_mismatched": 86,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   86,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      86,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1978,
+      "byte_offset": 15824,
+      "states_mismatched": 79,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   79,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      79,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1846,
+      "byte_offset": 14768,
+      "states_mismatched": 72,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 47,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   72,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      72,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1714,
+      "byte_offset": 13712,
+      "states_mismatched": 65,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   65,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      65,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1582,
+      "byte_offset": 12656,
+      "states_mismatched": 58,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   58,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      58,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1450,
+      "byte_offset": 11600,
+      "states_mismatched": 50,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 62,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   50,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      50,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1318,
+      "byte_offset": 10544,
+      "states_mismatched": 42,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   42,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      42,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1186,
+      "byte_offset": 9488,
+      "states_mismatched": 34,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   34,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      34,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 1054,
+      "byte_offset": 8432,
+      "states_mismatched": 27,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   27,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      27,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 922,
+      "byte_offset": 7376,
+      "states_mismatched": 21,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   21,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      21,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 790,
+      "byte_offset": 6320,
+      "states_mismatched": 16,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   16,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      16,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 658,
+      "byte_offset": 5264,
+      "states_mismatched": 12,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 65,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      12,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 526,
+      "byte_offset": 4208,
+      "states_mismatched": 8,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   8,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      8,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 394,
+      "byte_offset": 3152,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/test_jhash.h",
+        "line": 9,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 262,
+      "byte_offset": 2096,
+      "states_mismatched": 3,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 130,
+      "byte_offset": 1040,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/core_kern.c",
+        "line": 100,
+        "text": "C30;C30;C30; /* 90 calls */"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

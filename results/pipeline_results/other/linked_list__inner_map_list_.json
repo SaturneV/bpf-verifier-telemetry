@@ -1,0 +1,89 @@
+{
+  "prog_name": "inner_map_list_",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/linked_list.bpf.o",
+  "total_instructions_with_mismatches": 4,
+  "displayed": 4,
+  "total_mismatches_displayed": 1424,
+  "instructions": [
+    {
+      "insn_idx": 168,
+      "byte_offset": 1344,
+      "states_mismatched": 748,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 58,
+        "text": "bpf_list_push_front(head, &f->node2);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        748,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 154,
+      "byte_offset": 1232,
+      "states_mismatched": 673,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 46,
+        "text": "bpf_spin_lock(lock);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        664,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      9,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 157,
+      "byte_offset": 1256,
+      "states_mismatched": 2,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 47,
+        "text": "n = bpf_list_pop_back(head);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      2,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 172,
+      "byte_offset": 1376,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/linked_list.c",
+        "line": 59,
+        "text": "bpf_spin_unlock(lock);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      1,
+        "callsite":     0
+      }
+    }
+  ]
+}

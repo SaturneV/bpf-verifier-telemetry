@@ -1,0 +1,3819 @@
+{
+  "prog_name": "cls_redirect",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/test_cls_redirect_subprogs.bpf.o",
+  "total_instructions_with_mismatches": 157,
+  "displayed": 157,
+  "total_mismatches_displayed": 69900,
+  "instructions": [
+    {
+      "insn_idx": 979,
+      "byte_offset": 7832,
+      "states_mismatched": 7959,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   371,
+        "stack":        139,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       178,
+        "range":      193,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 742,
+      "byte_offset": 5936,
+      "states_mismatched": 7940,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 803,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   261,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      261,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 980,
+      "byte_offset": 7840,
+      "states_mismatched": 4834,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   18,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       18,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 709,
+      "byte_offset": 5672,
+      "states_mismatched": 4168,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1018,
+      "byte_offset": 8144,
+      "states_mismatched": 3490,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 425,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        456,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 990,
+      "byte_offset": 7920,
+      "states_mismatched": 2932,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       20,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 989,
+      "byte_offset": 7912,
+      "states_mismatched": 2807,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 995,
+      "byte_offset": 7960,
+      "states_mismatched": 1936,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 316,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   104,
+        "stack":        110,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       104,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 901,
+      "byte_offset": 7208,
+      "states_mismatched": 1922,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 865,
+      "byte_offset": 6920,
+      "states_mismatched": 1788,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 793,
+      "byte_offset": 6344,
+      "states_mismatched": 1708,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 151,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 757,
+      "byte_offset": 6056,
+      "states_mismatched": 1677,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 804,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 829,
+      "byte_offset": 6632,
+      "states_mismatched": 1543,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 657,
+      "byte_offset": 5256,
+      "states_mismatched": 1167,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   58,
+        "stack":        36,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       9,
+        "range":      49,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 717,
+      "byte_offset": 5736,
+      "states_mismatched": 1156,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 413,
+      "byte_offset": 3304,
+      "states_mismatched": 1038,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 751,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 404,
+      "byte_offset": 3232,
+      "states_mismatched": 977,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 225,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 658,
+      "byte_offset": 5264,
+      "states_mismatched": 829,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   41,
+        "stack":        7,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       14,
+        "range":      27,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 907,
+      "byte_offset": 7256,
+      "states_mismatched": 716,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 799,
+      "byte_offset": 6392,
+      "states_mismatched": 666,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 763,
+      "byte_offset": 6104,
+      "states_mismatched": 653,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 806,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 871,
+      "byte_offset": 6968,
+      "states_mismatched": 622,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 421,
+      "byte_offset": 3368,
+      "states_mismatched": 615,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 754,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   247,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      247,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 835,
+      "byte_offset": 6680,
+      "states_mismatched": 596,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 525,
+      "byte_offset": 4200,
+      "states_mismatched": 570,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 852,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   662,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       402,
+        "range":      256,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 725,
+      "byte_offset": 5800,
+      "states_mismatched": 474,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 357,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 540,
+      "byte_offset": 4320,
+      "states_mismatched": 424,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   18,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     168
+      },
+      "reg_field_mismatch": {
+        "type":       18,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 570,
+      "byte_offset": 4560,
+      "states_mismatched": 406,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     14
+      }
+    },
+    {
+      "insn_idx": 443,
+      "byte_offset": 3544,
+      "states_mismatched": 399,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   253,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     6
+      },
+      "reg_field_mismatch": {
+        "type":       100,
+        "range":      153,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 453,
+      "byte_offset": 3624,
+      "states_mismatched": 399,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   253,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     6
+      },
+      "reg_field_mismatch": {
+        "type":       84,
+        "range":      169,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 814,
+      "byte_offset": 6512,
+      "states_mismatched": 396,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 169,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 850,
+      "byte_offset": 6800,
+      "states_mismatched": 380,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 316,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 886,
+      "byte_offset": 7088,
+      "states_mismatched": 356,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 316,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 507,
+      "byte_offset": 4056,
+      "states_mismatched": 324,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        12,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 597,
+      "byte_offset": 4776,
+      "states_mismatched": 324,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 653,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 751,
+      "byte_offset": 6008,
+      "states_mismatched": 322,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 804,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 922,
+      "byte_offset": 7376,
+      "states_mismatched": 320,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 316,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 743,
+      "byte_offset": 5944,
+      "states_mismatched": 319,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 803,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 616,
+      "byte_offset": 4928,
+      "states_mismatched": 317,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 670,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   202,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       11,
+        "range":      189,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 533,
+      "byte_offset": 4264,
+      "states_mismatched": 314,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 201,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   201,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       11,
+        "range":      187,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     3,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 778,
+      "byte_offset": 6224,
+      "states_mismatched": 313,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 294,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 782,
+      "byte_offset": 6256,
+      "states_mismatched": 306,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 890,
+      "byte_offset": 7120,
+      "states_mismatched": 306,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 169,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 823,
+      "byte_offset": 6584,
+      "states_mismatched": 305,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 818,
+      "byte_offset": 6544,
+      "states_mismatched": 304,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 341,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 740,
+      "byte_offset": 5920,
+      "states_mismatched": 303,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 803,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 854,
+      "byte_offset": 6832,
+      "states_mismatched": 302,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 169,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 895,
+      "byte_offset": 7160,
+      "states_mismatched": 300,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 859,
+      "byte_offset": 6872,
+      "states_mismatched": 297,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 787,
+      "byte_offset": 6296,
+      "states_mismatched": 290,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 335,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 688,
+      "byte_offset": 5504,
+      "states_mismatched": 286,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        17,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       6,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 786,
+      "byte_offset": 6288,
+      "states_mismatched": 285,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 334,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 666,
+      "byte_offset": 5328,
+      "states_mismatched": 284,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        24,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 750,
+      "byte_offset": 6000,
+      "states_mismatched": 283,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 804,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 674,
+      "byte_offset": 5392,
+      "states_mismatched": 280,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        24,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 894,
+      "byte_offset": 7152,
+      "states_mismatched": 275,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 668,
+      "byte_offset": 5344,
+      "states_mismatched": 271,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        6,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 682,
+      "byte_offset": 5456,
+      "states_mismatched": 268,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 767,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        14,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       4,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 858,
+      "byte_offset": 6864,
+      "states_mismatched": 267,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 822,
+      "byte_offset": 6576,
+      "states_mismatched": 263,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 675,
+      "byte_offset": 5400,
+      "states_mismatched": 262,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   12,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       12,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 686,
+      "byte_offset": 5488,
+      "states_mismatched": 258,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   18,
+        "stack":        97,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       18,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 680,
+      "byte_offset": 5440,
+      "states_mismatched": 242,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 659,
+      "byte_offset": 5272,
+      "states_mismatched": 237,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 936,
+      "byte_offset": 7488,
+      "states_mismatched": 169,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 320,
+      "byte_offset": 2560,
+      "states_mismatched": 166,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 556,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   17,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      17,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 576,
+      "byte_offset": 4608,
+      "states_mismatched": 160,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 705,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       6,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 713,
+      "byte_offset": 5704,
+      "states_mismatched": 157,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 698,
+      "byte_offset": 5584,
+      "states_mismatched": 154,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 773,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 708,
+      "byte_offset": 5664,
+      "states_mismatched": 154,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 707,
+      "byte_offset": 5656,
+      "states_mismatched": 153,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 664,
+      "byte_offset": 5312,
+      "states_mismatched": 147,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       6,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 971,
+      "byte_offset": 7768,
+      "states_mismatched": 147,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   101,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      84,
+        "var_off":    0,
+        "id":         1,
+        "ref_obj_id": 0,
+        "offset":     16,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 712,
+      "byte_offset": 5696,
+      "states_mismatched": 146,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 824,
+      "byte_offset": 6592,
+      "states_mismatched": 122,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 788,
+      "byte_offset": 6304,
+      "states_mismatched": 116,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 860,
+      "byte_offset": 6880,
+      "states_mismatched": 96,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 534,
+      "byte_offset": 4272,
+      "states_mismatched": 83,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 201,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       3,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 617,
+      "byte_offset": 4936,
+      "states_mismatched": 83,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 670,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       3,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 392,
+      "byte_offset": 3136,
+      "states_mismatched": 79,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   112,
+        "stack":        7,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       81,
+        "range":      21,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     10,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 472,
+      "byte_offset": 3776,
+      "states_mismatched": 76,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 834,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   25,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     40
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      25,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 966,
+      "byte_offset": 7728,
+      "states_mismatched": 74,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 300,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 955,
+      "byte_offset": 7640,
+      "states_mismatched": 70,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 173,
+      "byte_offset": 1384,
+      "states_mismatched": 68,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 272,
+      "byte_offset": 2176,
+      "states_mismatched": 57,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 541,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       2,
+        "range":      5,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 424,
+      "byte_offset": 3392,
+      "states_mismatched": 57,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 759,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 316,
+      "byte_offset": 2528,
+      "states_mismatched": 45,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 551,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 515,
+      "byte_offset": 4120,
+      "states_mismatched": 40,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 851,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   28,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       20,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     4,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 268,
+      "byte_offset": 2144,
+      "states_mismatched": 35,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   5,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       5,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 470,
+      "byte_offset": 3760,
+      "states_mismatched": 35,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 833,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     30
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 378,
+      "byte_offset": 3024,
+      "states_mismatched": 32,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 734,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   27,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       27,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 469,
+      "byte_offset": 3752,
+      "states_mismatched": 32,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 833,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     25
+      }
+    },
+    {
+      "insn_idx": 171,
+      "byte_offset": 1368,
+      "states_mismatched": 30,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 158,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 292,
+      "byte_offset": 2336,
+      "states_mismatched": 28,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 548,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       2,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 305,
+      "byte_offset": 2440,
+      "states_mismatched": 28,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 549,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 372,
+      "byte_offset": 2976,
+      "states_mismatched": 28,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 725,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   16,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      10,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     6,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 486,
+      "byte_offset": 3888,
+      "states_mismatched": 24,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 839,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 286,
+      "byte_offset": 2288,
+      "states_mismatched": 23,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 548,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       4,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 110,
+      "byte_offset": 880,
+      "states_mismatched": 22,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 1045,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      22,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 265,
+      "byte_offset": 2120,
+      "states_mismatched": 22,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      22,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 605,
+      "byte_offset": 4840,
+      "states_mismatched": 22,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 670,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   22,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       17,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     2,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 942,
+      "byte_offset": 7536,
+      "states_mismatched": 22,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 115,
+      "byte_offset": 920,
+      "states_mismatched": 18,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 1045,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   18,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      18,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 259,
+      "byte_offset": 2072,
+      "states_mismatched": 16,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 270,
+      "byte_offset": 2160,
+      "states_mismatched": 16,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 281,
+      "byte_offset": 2248,
+      "states_mismatched": 16,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 543,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 260,
+      "byte_offset": 2080,
+      "states_mismatched": 15,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 331,
+      "byte_offset": 2648,
+      "states_mismatched": 15,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 561,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 344,
+      "byte_offset": 2752,
+      "states_mismatched": 14,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 169,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 367,
+      "byte_offset": 2936,
+      "states_mismatched": 14,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 162,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 168,
+      "byte_offset": 1344,
+      "states_mismatched": 11,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 278,
+      "byte_offset": 2224,
+      "states_mismatched": 11,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 541,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 296,
+      "byte_offset": 2368,
+      "states_mismatched": 11,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 548,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       1,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 465,
+      "byte_offset": 3720,
+      "states_mismatched": 11,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 833,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     11
+      }
+    },
+    {
+      "insn_idx": 752,
+      "byte_offset": 6016,
+      "states_mismatched": 11,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 804,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 351,
+      "byte_offset": 2808,
+      "states_mismatched": 10,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 151,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 255,
+      "byte_offset": 2040,
+      "states_mismatched": 9,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 537,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       3,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 656,
+      "byte_offset": 5248,
+      "states_mismatched": 9,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   299,
+        "stack":        216,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       299,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 663,
+      "byte_offset": 5304,
+      "states_mismatched": 9,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 636,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   9,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      9,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 142,
+      "byte_offset": 1136,
+      "states_mismatched": 7,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 881,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      7,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 98,
+      "byte_offset": 784,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 1033,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 290,
+      "byte_offset": 2320,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 548,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 442,
+      "byte_offset": 3536,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 186,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      6,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 941,
+      "byte_offset": 7528,
+      "states_mismatched": 6,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   6,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      6,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 210,
+      "byte_offset": 1680,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 918,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 284,
+      "byte_offset": 2272,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 546,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 485,
+      "byte_offset": 3880,
+      "states_mismatched": 5,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 835,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     3
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 258,
+      "byte_offset": 2064,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 539,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   7,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       7,
+        "range":      0,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 532,
+      "byte_offset": 4256,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 853,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 539,
+      "byte_offset": 4312,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 152,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 622,
+      "byte_offset": 4976,
+      "states_mismatched": 4,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 685,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   4,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      4,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 103,
+      "byte_offset": 824,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 195,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 111,
+      "byte_offset": 888,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 1045,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        3,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 121,
+      "byte_offset": 968,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 867,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 235,
+      "byte_offset": 1880,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 536,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 244,
+      "byte_offset": 1952,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 536,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 285,
+      "byte_offset": 2280,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 547,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 336,
+      "byte_offset": 2688,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 566,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 641,
+      "byte_offset": 5128,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 626,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 648,
+      "byte_offset": 5184,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 634,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 681,
+      "byte_offset": 5448,
+      "states_mismatched": 3,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 767,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   3,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      3,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 95,
+      "byte_offset": 760,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 1031,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 117,
+      "byte_offset": 936,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 890,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 225,
+      "byte_offset": 1800,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 927,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   2,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      2,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 302,
+      "byte_offset": 2416,
+      "states_mismatched": 2,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 549,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 58,
+      "byte_offset": 464,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 388,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 186,
+      "byte_offset": 1488,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 357,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 191,
+      "byte_offset": 1528,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 357,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 209,
+      "byte_offset": 1672,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 918,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 221,
+      "byte_offset": 1768,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 921,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 224,
+      "byte_offset": 1792,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 924,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 251,
+      "byte_offset": 2008,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 537,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 298,
+      "byte_offset": 2384,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 549,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 474,
+      "byte_offset": 3792,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 834,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 477,
+      "byte_offset": 3816,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 834,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 482,
+      "byte_offset": 3856,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 823,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 1225,
+      "byte_offset": 9800,
+      "states_mismatched": 1,
+      "source": {
+        "file": "progs/test_cls_redirect.c",
+        "line": 255,
+        "text": ""
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

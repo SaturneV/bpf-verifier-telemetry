@@ -1,0 +1,9 @@
+{
+  "prog_name": "pkt_meta_bad_ac",
+  "group": "network",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/verifier_xdp_direct_packet_access.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

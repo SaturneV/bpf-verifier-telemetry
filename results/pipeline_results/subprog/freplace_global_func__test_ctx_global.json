@@ -1,0 +1,9 @@
+{
+  "prog_name": "test_ctx_global",
+  "group": "subprog",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/freplace_global_func.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}

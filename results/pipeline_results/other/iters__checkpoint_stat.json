@@ -1,0 +1,149 @@
+{
+  "prog_name": "checkpoint_stat",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/iters.bpf.o",
+  "total_instructions_with_mismatches": 6,
+  "displayed": 6,
+  "total_mismatches_displayed": 315,
+  "instructions": [
+    {
+      "insn_idx": 14,
+      "byte_offset": 112,
+      "states_mismatched": 139,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 102,
+        "text": "bpf_printk(\"ITER_BASIC: E1 VAL: v=%d\", *v);"
+      },
+      "mismatch_breakdown": {
+        "registers":   19,
+        "stack":        120,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      19,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    },
+    {
+      "insn_idx": 77,
+      "byte_offset": 616,
+      "states_mismatched": 103,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 153,
+        "text": "bpf_for_each(num, v, 5, 10) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        103,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 12,
+      "byte_offset": 96,
+      "states_mismatched": 26,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 102,
+        "text": "bpf_printk(\"ITER_BASIC: E1 VAL: v=%d\", *v);"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        26,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 80,
+      "byte_offset": 640,
+      "states_mismatched": 25,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 546,
+        "text": "bpf_repeat(1000000) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        25,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 74,
+      "byte_offset": 592,
+      "states_mismatched": 21,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 477,
+        "text": "bpf_for(col, 0, ARRAY_SIZE(arr2d[0])) {"
+      },
+      "mismatch_breakdown": {
+        "registers":   0,
+        "stack":        21,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      }
+    },
+    {
+      "insn_idx": 67,
+      "byte_offset": 536,
+      "states_mismatched": 1,
+      "source": {
+        "file": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/progs/iters.c",
+        "line": 142,
+        "text": "return 0;"
+      },
+      "mismatch_breakdown": {
+        "registers":   1,
+        "stack":        0,
+        "cbdepth":      0,
+        "curframe":     0,
+        "speculative":  0,
+        "sleepable":    0,
+        "refsafe":      0,
+        "callsite":     0
+      },
+      "reg_field_mismatch": {
+        "type":       0,
+        "range":      1,
+        "var_off":    0,
+        "id":         0,
+        "ref_obj_id": 0,
+        "offset":     0,
+        "frameno":    0,
+        "other":      0
+      }
+    }
+  ]
+}

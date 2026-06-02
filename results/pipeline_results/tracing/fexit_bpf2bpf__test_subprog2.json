@@ -1,0 +1,9 @@
+{
+  "prog_name": "test_subprog2",
+  "group": "tracing",
+  "elf_obj": "/home/debian/linux-ebpf-verifier-profiling/tools/testing/selftests/bpf/fexit_bpf2bpf.bpf.o",
+  "total_instructions_with_mismatches": 0,
+  "displayed": 0,
+  "total_mismatches_displayed": 0,
+  "instructions": []
+}
