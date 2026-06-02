@@ -10,7 +10,6 @@
  *
  * Register-field mismatch sub-categories tracked (all 8):
  *   type, range, var_off, id, ref_obj_id, offset, frameno, other
- *   (requires kernel patch + bpf_verifier.h with reg_field_pair3/pair4 args)
  *
  * Requirements:
  *   - BPF program compiled with: clang -g -O2 -target bpf -c prog.bpf.c -o prog.bpf.o
@@ -18,16 +17,16 @@
  *   - Kernel built with verifier.patch and trace/events/bpf_verifier.h applied
  *
  * Compile:
- *   gcc -O2 -o bpf_verifier_source_report bpf_verifier_source_report.c -ldw -lelf
+ *   gcc -O2 -o bpf-mismatch-report bpf-mismatch-report.c -ldw -lelf
  *
  * Usage:
- *   sudo ./bpf_verifier_source_report [--top N] [--html out.html] [--json out.json] <prog_name> <prog.bpf.o>
+ *   sudo ./bpf-mismatch-report [--top N] [--html out.html] [--json out.json] <prog_name> <prog.bpf.o>
  *
  * Examples:
- *   sudo ./bpf_verifier_source_report test_comp ./test_comp.bpf.o
- *   sudo ./bpf_verifier_source_report --top 5 test_comp ./test_comp.bpf.o
- *   sudo ./bpf_verifier_source_report --html report.html test_comp ./test_comp.bpf.o
- *   sudo ./bpf_verifier_source_report --json report.json test_comp ./test_comp.bpf.o
+ *   sudo ./bpf-mismatch-report first_func ./prog.bpf.o
+ *   sudo ./bpf-mismatch-report --top 5 first_func ./prog.bpf.o
+ *   sudo ./bpf-mismatch-report --html report.html first_func ./prog.bpf.o
+ *   sudo ./bpf-mismatch-report --json report.json first_func ./prog.bpf.o
  */
 
 #include <stdio.h>
