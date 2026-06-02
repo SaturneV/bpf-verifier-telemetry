@@ -1,0 +1,390 @@
+diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
+index dbaafb64d3bd..89e89988dd3b 100644
+--- a/kernel/bpf/verifier.c
++++ b/kernel/bpf/verifier.c
+@@ -33,6 +33,10 @@
+ 
+ #include "disasm.h"
+ 
++/* Include tracepoint definitions for verifier telemetry */
++#define CREATE_TRACE_POINTS
++#include <trace/events/bpf_verifier.h>
++
+ static const struct bpf_verifier_ops * const bpf_verifier_ops[] = {
+ #define BPF_PROG_TYPE(_id, _name, prog_ctx_type, kern_ctx_type) \
+ 	[_id] = & _name ## _verifier_ops,
+@@ -19713,6 +19717,142 @@ enum exact_level {
+ 	RANGE_WITHIN
+ };
+ 
++/* Enum to track which register field caused a mismatch */
++enum reg_mismatch_field {
++	REG_MISMATCH_TYPE,
++	REG_MISMATCH_RANGE,
++	REG_MISMATCH_VAR_OFF,
++	REG_MISMATCH_ID,
++	REG_MISMATCH_REF_OBJ_ID,
++	REG_MISMATCH_OFFSET,
++	REG_MISMATCH_FRAMENO,
++	REG_MISMATCH_OTHER,
++	REG_MISMATCH_NONE,
++};
++
++/* Track which specific field caused the register mismatch */
++static inline void track_reg_mismatch_field(struct bpf_verifier_env *env,
++					    u32 insn_idx,
++					    enum reg_mismatch_field field)
++{
++	if (!env || field == REG_MISMATCH_NONE)
++		return;
++
++	switch (field) {
++	case REG_MISMATCH_TYPE:
++		env->insn_aux_data[insn_idx].reg_mismatch_type++;
++		env->total_reg_mismatch_type++;
++		break;
++	case REG_MISMATCH_RANGE:
++		env->insn_aux_data[insn_idx].reg_mismatch_range++;
++		env->total_reg_mismatch_range++;
++		break;
++	case REG_MISMATCH_VAR_OFF:
++		env->insn_aux_data[insn_idx].reg_mismatch_var_off++;
++		env->total_reg_mismatch_var_off++;
++		break;
++	case REG_MISMATCH_ID:
++		env->insn_aux_data[insn_idx].reg_mismatch_id++;
++		env->total_reg_mismatch_id++;
++		break;
++	case REG_MISMATCH_REF_OBJ_ID:
++		env->insn_aux_data[insn_idx].reg_mismatch_ref_obj_id++;
++		env->total_reg_mismatch_ref_obj_id++;
++		break;
++	case REG_MISMATCH_OFFSET:
++		env->insn_aux_data[insn_idx].reg_mismatch_offset++;
++		env->total_reg_mismatch_offset++;
++		break;
++	case REG_MISMATCH_FRAMENO:
++		env->insn_aux_data[insn_idx].reg_mismatch_frameno++;
++		env->total_reg_mismatch_frameno++;
++		break;
++	case REG_MISMATCH_OTHER:
++		env->insn_aux_data[insn_idx].reg_mismatch_other++;
++		env->total_reg_mismatch_other++;
++		break;
++	default:
++		break;
++	}
++}
++
++/* Declaration of regsafe */
++static bool regsafe(struct bpf_verifier_env *env, struct bpf_reg_state *rold,
++		    struct bpf_reg_state *rcur, struct bpf_idmap *idmap,
++		    enum exact_level exact);
++
++/* Wrapper around regsafe that tracks which field caused mismatch */
++static bool regsafe_with_tracking(struct bpf_verifier_env *env,
++				   struct bpf_reg_state *rold,
++				   struct bpf_reg_state *rcur,
++				   struct bpf_idmap *idmap,
++				   enum exact_level exact,
++				   u32 insn_idx,
++				   enum reg_mismatch_field *mismatch_field_out)
++{
++	bool result;
++	enum reg_mismatch_field field_matched = REG_MISMATCH_NONE;
++
++	/* Call the original regsafe function */
++	result = regsafe(env, rold, rcur, idmap, exact);
++
++	/* If regsafe returned true, no mismatch */
++	if (result)
++		return true;
++
++	/* Determine which field caused the mismatch */
++	/* Check type mismatch */
++	if (rold->type != rcur->type) {
++		field_matched = REG_MISMATCH_TYPE;
++	}
++	/* Check for range mismatch (min/max values) */
++	else if (rold->smin_value != rcur->smin_value ||
++		 rold->smax_value != rcur->smax_value ||
++		 rold->umin_value != rcur->umin_value ||
++		 rold->umax_value != rcur->umax_value ||
++		 rold->s32_min_value != rcur->s32_min_value ||
++		 rold->s32_max_value != rcur->s32_max_value ||
++		 rold->u32_min_value != rcur->u32_min_value ||
++		 rold->u32_max_value != rcur->u32_max_value) {
++		field_matched = REG_MISMATCH_RANGE;
++	}
++	/* Check for variable offset mismatch */
++	else if (rold->var_off.value != rcur->var_off.value ||
++		 rold->var_off.mask != rcur->var_off.mask) {
++		field_matched = REG_MISMATCH_VAR_OFF;
++	}
++	/* Check for offset field mismatch */
++	else if (rold->off != rcur->off) {
++		field_matched = REG_MISMATCH_OFFSET;
++	}
++	/* Check for id mismatch */
++	else if (rold->id != rcur->id) {
++		field_matched = REG_MISMATCH_ID;
++	}
++	/* Check for ref_obj_id mismatch */
++	else if (rold->ref_obj_id != rcur->ref_obj_id) {
++		field_matched = REG_MISMATCH_REF_OBJ_ID;
++	}
++	/* Check for frameno mismatch (only for STACK pointers) */
++	else if (base_type(rold->type) == PTR_TO_STACK &&
++		 rold->frameno != rcur->frameno) {
++		field_matched = REG_MISMATCH_FRAMENO;
++	}
++	/* Default to other if we couldn't determine the specific field */
++	else {
++		field_matched = REG_MISMATCH_OTHER;
++	}
++
++	/* Track the mismatch */
++	if (field_matched != REG_MISMATCH_NONE) {
++		track_reg_mismatch_field(env, insn_idx, field_matched);
++		if (mismatch_field_out)
++			*mismatch_field_out = field_matched;
++	}
++
++	return false;
++}
++
+ /* Returns true if (rold safe implies rcur safe) */
+ static bool regsafe(struct bpf_verifier_env *env, struct bpf_reg_state *rold,
+ 		    struct bpf_reg_state *rcur, struct bpf_idmap *idmap,
+@@ -20104,17 +20244,27 @@ static bool func_states_equal(struct bpf_verifier_env *env, struct bpf_func_stat
+ 	u16 live_regs = env->insn_aux_data[insn_idx].live_regs_before;
+ 	u16 i;
+ 
+-	if (old->callback_depth > cur->callback_depth)
++	if (old->callback_depth > cur->callback_depth) {
++		env->insn_aux_data[insn_idx].mismatch_callback_depth++;
++		env->total_mismatch_callback_depth++;
+ 		return false;
++	}
+ 
+-	for (i = 0; i < MAX_BPF_REG; i++)
++	for (i = 0; i < MAX_BPF_REG; i++) {
+ 		if (((1 << i) & live_regs) &&
+-		    !regsafe(env, &old->regs[i], &cur->regs[i],
+-			     &env->idmap_scratch, exact))
++		    !regsafe_with_tracking(env, &old->regs[i], &cur->regs[i],
++					   &env->idmap_scratch, exact, insn_idx, NULL)) {
++			env->insn_aux_data[insn_idx].mismatch_registers++;
++			env->total_mismatch_registers++;
+ 			return false;
++		}
++	}
+ 
+-	if (!stacksafe(env, old, cur, &env->idmap_scratch, exact))
++	if (!stacksafe(env, old, cur, &env->idmap_scratch, exact)) {
++		env->insn_aux_data[insn_idx].mismatch_stack++;
++		env->total_mismatch_stack++;
+ 		return false;
++	}
+ 
+ 	return true;
+ }
+@@ -20135,33 +20285,76 @@ static bool states_equal(struct bpf_verifier_env *env,
+ 	u32 insn_idx;
+ 	int i;
+ 
+-	if (old->curframe != cur->curframe)
++	/* Track state comparison for this instruction and globally */
++	env->insn_aux_data[env->insn_idx].states_compared++;
++	env->total_states_compared++;
++
++	if (old->curframe != cur->curframe) {
++		env->insn_aux_data[env->insn_idx].states_mismatched++;
++		env->insn_aux_data[env->insn_idx].mismatch_curframe++;
++		env->total_states_mismatched++;
++		env->total_mismatch_curframe++;
+ 		return false;
++	}
+ 
+ 	reset_idmap_scratch(env);
+ 
+ 	/* Verification state from speculative execution simulation
+ 	 * must never prune a non-speculative execution one.
+ 	 */
+-	if (old->speculative && !cur->speculative)
++	if (old->speculative && !cur->speculative) {
++		env->insn_aux_data[env->insn_idx].states_mismatched++;
++		env->insn_aux_data[env->insn_idx].mismatch_speculative++;
++		env->total_states_mismatched++;
++		env->total_mismatch_speculative++;
+ 		return false;
++	}
+ 
+-	if (old->in_sleepable != cur->in_sleepable)
++	if (old->in_sleepable != cur->in_sleepable) {
++		env->insn_aux_data[env->insn_idx].states_mismatched++;
++		env->insn_aux_data[env->insn_idx].mismatch_sleepable++;
++		env->total_states_mismatched++;
++		env->total_mismatch_sleepable++;
+ 		return false;
++	}
+ 
+-	if (!refsafe(old, cur, &env->idmap_scratch))
++	if (!refsafe(old, cur, &env->idmap_scratch)) {
++		env->insn_aux_data[env->insn_idx].states_mismatched++;
++		env->insn_aux_data[env->insn_idx].mismatch_refsafe++;
++		env->total_states_mismatched++;
++		env->total_mismatch_refsafe++;
+ 		return false;
++	}
+ 
+ 	/* for states to be equal callsites have to be the same
+ 	 * and all frame states need to be equivalent
+ 	 */
+ 	for (i = 0; i <= old->curframe; i++) {
+ 		insn_idx = frame_insn_idx(old, i);
+-		if (old->frame[i]->callsite != cur->frame[i]->callsite)
++		if (old->frame[i]->callsite != cur->frame[i]->callsite) {
++			env->insn_aux_data[env->insn_idx].states_mismatched++;
++			env->insn_aux_data[env->insn_idx].mismatch_callsite++;
++			env->total_states_mismatched++;
++			env->total_mismatch_callsite++;
+ 			return false;
+-		if (!func_states_equal(env, old->frame[i], cur->frame[i], insn_idx, exact))
++		}
++		if (!func_states_equal(env, old->frame[i], cur->frame[i], insn_idx, exact)) {
++			env->insn_aux_data[env->insn_idx].states_mismatched++;
++			env->total_states_mismatched++;
+ 			return false;
++		}
++	}
++
++	/* States matched successfully */
++	env->insn_aux_data[env->insn_idx].states_matched++;
++	env->total_states_matched++;
++
++	/* Track instruction with maximum mismatches */
++	if (env->insn_aux_data[env->insn_idx].states_mismatched > env->max_mismatch_count) {
++		env->max_mismatch_count = env->insn_aux_data[env->insn_idx].states_mismatched;
++		env->max_mismatch_insn_idx = env->insn_idx;
+ 	}
++
+ 	return true;
+ }
+ 
+@@ -25842,6 +26035,104 @@ static int compute_scc(struct bpf_verifier_env *env)
+ 	return err;
+ }
+ 
++/* Emit verifier state comparison statistics through structured tracepoints.
++ *
++ * Packing scheme (same for both prog-level and insn-level tracepoints):
++ *
++ *   State-level mismatches — 8 categories packed two-per-u64:
++ *     mismatch_pair1: cbdepth(low32)   | curframe(high32)
++ *     mismatch_pair2: spec(low32)      | sleepable(high32)
++ *     mismatch_pair3: refsafe(low32)   | callsite(high32)
++ *     mismatch_pair4: registers(low32) | stack(high32)
++ *
++ *   Register-field mismatches — all 8 sub-categories packed two-per-u64:
++ *     reg_field_pair1: type(low32)       | range(high32)
++ *     reg_field_pair2: var_off(low32)    | id(high32)
++ *     reg_field_pair3: ref_obj_id(low32) | offset(high32)   ← was hardcoded 0
++ *     reg_field_pair4: frameno(low32)    | other(high32)    ← was hardcoded 0
++ */
++static void bpf_verifier_log_state_stats(struct bpf_verifier_env *env)
++{
++	u32 i, insn_cnt;
++
++	insn_cnt = env->prog->len;
++
++	/* DEBUG: Print to kernel log to verify function is called */
++	pr_info("[BPF_TELEMETRY] prog_name=%s prog_len=%u total_compared=%u total_matched=%u total_mismatched=%u\n",
++		env->prog->aux->name, insn_cnt,
++		env->total_states_compared, env->total_states_matched, env->total_states_mismatched);
++
++	/* Log field-specific register mismatch stats to kernel log */
++	pr_info("[BPF_REG_FIELD_MISMATCH] type=%u range=%u var_off=%u id=%u ref_obj_id=%u offset=%u frameno=%u other=%u\n",
++		env->total_reg_mismatch_type,
++		env->total_reg_mismatch_range,
++		env->total_reg_mismatch_var_off,
++		env->total_reg_mismatch_id,
++		env->total_reg_mismatch_ref_obj_id,
++		env->total_reg_mismatch_offset,
++		env->total_reg_mismatch_frameno,
++		env->total_reg_mismatch_other);
++
++	/* Emit aggregated per-program statistics via tracepoint */
++	trace_bpf_verifier_prog_stats(
++		env->prog->aux->name,
++		insn_cnt,
++		env->total_states_compared,
++		env->total_states_matched,
++		env->total_states_mismatched,
++		/* State-level mismatch pairs */
++		((u64)env->total_mismatch_curframe        << 32) | env->total_mismatch_callback_depth,
++		((u64)env->total_mismatch_sleepable        << 32) | env->total_mismatch_speculative,
++		((u64)env->total_mismatch_callsite         << 32) | env->total_mismatch_refsafe,
++		((u64)env->total_mismatch_stack            << 32) | env->total_mismatch_registers,
++		/* Register-field mismatch pairs — all 8 fields */
++		((u64)env->total_reg_mismatch_range        << 32) | env->total_reg_mismatch_type,
++		((u64)env->total_reg_mismatch_id           << 32) | env->total_reg_mismatch_var_off,
++		((u64)env->total_reg_mismatch_offset       << 32) | env->total_reg_mismatch_ref_obj_id,
++		((u64)env->total_reg_mismatch_other        << 32) | env->total_reg_mismatch_frameno);
++
++	/* Emit aggregated per-instruction statistics via tracepoint */
++	for (i = 0; i < insn_cnt; i++) {
++		if (env->insn_aux_data[i].states_compared == 0)
++			continue;
++
++		trace_bpf_verifier_insn_stats(
++			env->prog->aux->name,
++			i,
++			env->insn_aux_data[i].states_compared,
++			env->insn_aux_data[i].states_matched,
++			env->insn_aux_data[i].states_mismatched,
++			/* State-level mismatch pairs */
++			((u64)env->insn_aux_data[i].mismatch_curframe   << 32) | env->insn_aux_data[i].mismatch_callback_depth,
++			((u64)env->insn_aux_data[i].mismatch_sleepable  << 32) | env->insn_aux_data[i].mismatch_speculative,
++			((u64)env->insn_aux_data[i].mismatch_callsite   << 32) | env->insn_aux_data[i].mismatch_refsafe,
++			((u64)env->insn_aux_data[i].mismatch_stack      << 32) | env->insn_aux_data[i].mismatch_registers,
++			/* Register-field mismatch pairs — all 8 fields */
++			((u64)env->insn_aux_data[i].reg_mismatch_range      << 32) | env->insn_aux_data[i].reg_mismatch_type,
++			((u64)env->insn_aux_data[i].reg_mismatch_id         << 32) | env->insn_aux_data[i].reg_mismatch_var_off,
++			((u64)env->insn_aux_data[i].reg_mismatch_offset     << 32) | env->insn_aux_data[i].reg_mismatch_ref_obj_id,
++			((u64)env->insn_aux_data[i].reg_mismatch_other      << 32) | env->insn_aux_data[i].reg_mismatch_frameno);
++
++		/* Log per-instruction field-specific mismatches to kernel log */
++		if (env->insn_aux_data[i].reg_mismatch_type    ||
++		    env->insn_aux_data[i].reg_mismatch_range   ||
++		    env->insn_aux_data[i].reg_mismatch_var_off ||
++		    env->insn_aux_data[i].reg_mismatch_id      ||
++		    env->insn_aux_data[i].reg_mismatch_ref_obj_id ||
++		    env->insn_aux_data[i].reg_mismatch_offset  ||
++		    env->insn_aux_data[i].reg_mismatch_frameno ||
++		    env->insn_aux_data[i].reg_mismatch_other) {
++			pr_info("[BPF_INSN_REG_FIELD_MISMATCH] insn=%u type=%u range=%u var_off=%u id=%u ref_obj_id=%u offset=%u frameno=%u other=%u\n",
++				i,
++				env->insn_aux_data[i].reg_mismatch_type,
++				env->insn_aux_data[i].reg_mismatch_range,
++				env->insn_aux_data[i].reg_mismatch_var_off,
++				env->insn_aux_data[i].reg_mismatch_id,
++				env->insn_aux_data[i].reg_mismatch_ref_obj_id,
++				env->insn_aux_data[i].reg_mismatch_offset,
++				env->insn_aux_data[i].reg_mismatch_frameno,
++				env->insn_aux_data[i].reg_mismatch_other);
++		}
++	}
++}
++
+ int bpf_check(struct bpf_prog **prog, union bpf_attr *attr, bpfptr_t uattr, __u32 uattr_size)
+ {
+ 	u64 start_time = ktime_get_ns();
+@@ -26043,6 +26317,7 @@ int bpf_check(struct bpf_prog **prog, union bpf_attr *attr, bpfptr_t uattr, __u3
+ 
+ 	env->verification_time = ktime_get_ns() - start_time;
+ 	print_verification_stats(env);
++	bpf_verifier_log_state_stats(env);
+ 	env->prog->aux->verified_insns = env->insn_processed;
+ 
+ 	/* preserve original error even if log finalization is successful */
