@@ -120,7 +120,7 @@ def savefig(fig, out_dir, name, fmt):
 
 def fig1(prog_df, out_dir, fmt):
     print("  Fig1: Verifier State Mismatch Category Distribution...")
-    cats   = [c for c in STATE_CATS if prog_df[c].sum() > 0]
+    cats   = [c for c in STATE_CATS]
     labels = [STATE_LABELS[c] for c in cats]
     totals = [int(prog_df[c].sum()) for c in cats]
     grand  = sum(totals)
