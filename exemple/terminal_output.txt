@@ -1,0 +1,323 @@
+debian@localhost:~$ sudo ./bpf-verifier-telemetry/bpf-mismatch-report complex_verifie complex_mismatches.o
+=== BPF Verifier Instruction Mismatch Report ===
+Program : complex_verifie
+ELF obj : complex_mismatches.o
+
+Reading tracepoint data from /sys/kernel/tracing/trace ...
+Found 34 instructions with mismatches.
+Looking up DWARF debug info in complex_mismatches.o ...
+
+╔════════════════════════════════════════════════════════════════════╗
+║              BPF Verifier Source Code Mismatch Report              ║
+╚════════════════════════════════════════════════════════════════════╝
+
+Showing all 34 instructions with mismatches.
+
+[1/34] Instruction: 0x84  (byte offset 0x420)
+Total Mismatches: 3233
+Source: /home/debian/complex_mismatches.c:101
+  ->  if (result > 500000) {
+  Mismatch breakdown:
+      Register state:              3233
+  Register field causing mismatch:
+      Value range:                 3233
+──────────────────────────────────────────────────────────────────────────────────────
+[2/34] Instruction: 0x7d  (byte offset 0x3e8)
+Total Mismatches: 1276
+Source: /home/debian/complex_mismatches.c:93
+  ->  if (i > 5) {
+  Mismatch breakdown:
+      Register state:              1276
+  Register field causing mismatch:
+      Value range:                 1233
+      Register ID:                 41
+      Other:                       2
+──────────────────────────────────────────────────────────────────────────────────────
+[3/34] Instruction: 0x77  (byte offset 0x3b8)
+Total Mismatches: 873
+Source: /home/debian/complex_mismatches.c:89
+  ->  result += z;
+  Mismatch breakdown:
+      Register state:              873
+  Register field causing mismatch:
+      Value range:                 873
+──────────────────────────────────────────────────────────────────────────────────────
+[4/34] Instruction: 0x7c  (byte offset 0x3e0)
+Total Mismatches: 733
+Source: /home/debian/complex_mismatches.c:93
+  ->  if (i > 5) {
+  Mismatch breakdown:
+      Register state:              733
+  Register field causing mismatch:
+      Value range:                 733
+──────────────────────────────────────────────────────────────────────────────────────
+[5/34] Instruction: 0xf1  (byte offset 0x788)
+Total Mismatches: 642
+Source: /home/debian/complex_mismatches.c:208
+  ->  if (result & 0x1) {
+  Mismatch breakdown:
+      Register state:              642
+  Register field causing mismatch:
+      Value range:                 642
+──────────────────────────────────────────────────────────────────────────────────────
+[6/34] Instruction: 0xf0  (byte offset 0x780)
+Total Mismatches: 597
+Source: /home/debian/complex_mismatches.c:208
+  ->  if (result & 0x1) {
+  Mismatch breakdown:
+      Register state:              597
+  Register field causing mismatch:
+      Value range:                 597
+──────────────────────────────────────────────────────────────────────────────────────
+[7/34] Instruction: 0x87  (byte offset 0x438)
+Total Mismatches: 438
+Source: /home/debian/complex_mismatches.c:106
+  ->  result = result - 1000;
+  Mismatch breakdown:
+      Register state:              438
+  Register field causing mismatch:
+      Value range:                 438
+──────────────────────────────────────────────────────────────────────────────────────
+[8/34] Instruction: 0x74  (byte offset 0x3a0)
+Total Mismatches: 381
+Source: /home/debian/complex_mismatches.c:89
+  ->  result += z;
+  Mismatch breakdown:
+      Register state:              381
+  Register field causing mismatch:
+      Value range:                 381
+──────────────────────────────────────────────────────────────────────────────────────
+[9/34] Instruction: 0xef  (byte offset 0x778)
+Total Mismatches: 333
+Source: /home/debian/complex_mismatches.c:208
+  ->  if (result & 0x1) {
+  Mismatch breakdown:
+      Register state:              333
+  Register field causing mismatch:
+      Value range:                 333
+──────────────────────────────────────────────────────────────────────────────────────
+[10/34] Instruction: 0xfd  (byte offset 0x7e8)
+Total Mismatches: 322
+Source: /home/debian/complex_mismatches.c:220
+  ->  __sync_fetch_and_add(val, result);
+  Mismatch breakdown:
+      Register state:              322
+  Register field causing mismatch:
+      Value range:                 322
+──────────────────────────────────────────────────────────────────────────────────────
+[11/34] Instruction: 0xf5  (byte offset 0x7a8)
+Total Mismatches: 227
+Source: /home/debian/complex_mismatches.c:217
+  ->  __u32 key = 0;
+  Mismatch breakdown:
+      Register state:              227
+  Register field causing mismatch:
+      Value range:                 227
+──────────────────────────────────────────────────────────────────────────────────────
+[12/34] Instruction: 0xfa  (byte offset 0x7d0)
+Total Mismatches: 220
+Source: /home/debian/complex_mismatches.c:218
+  ->  __u64 *val = bpf_map_lookup_elem(&stats_map, &key);
+  Mismatch breakdown:
+      Register state:              220
+  Register field causing mismatch:
+      Value range:                 220
+──────────────────────────────────────────────────────────────────────────────────────
+[13/34] Instruction: 0xf8  (byte offset 0x7c0)
+Total Mismatches: 219
+Source: /home/debian/complex_mismatches.c:218
+  ->  __u64 *val = bpf_map_lookup_elem(&stats_map, &key);
+  Mismatch breakdown:
+      Register state:              219
+  Register field causing mismatch:
+      Value range:                 219
+──────────────────────────────────────────────────────────────────────────────────────
+[14/34] Instruction: 0xf6  (byte offset 0x7b0)
+Total Mismatches: 192
+Source: /home/debian/complex_mismatches.c:217
+  ->  __u32 key = 0;
+  Mismatch breakdown:
+      Register state:              192
+  Register field causing mismatch:
+      Value range:                 192
+──────────────────────────────────────────────────────────────────────────────────────
+[15/34] Instruction: 0xf4  (byte offset 0x7a0)
+Total Mismatches: 178
+Source: /home/debian/complex_mismatches.c:209
+  ->  result = result >> 1;
+  Mismatch breakdown:
+      Register state:              178
+  Register field causing mismatch:
+      Value range:                 178
+──────────────────────────────────────────────────────────────────────────────────────
+[16/34] Instruction: 0xa3  (byte offset 0x518)
+Total Mismatches: 154
+Source: /home/debian/complex_mismatches.c:141
+  ->  result /= (j + 1);
+  Mismatch breakdown:
+      Register state:              154
+  Register field causing mismatch:
+      Value range:                 154
+──────────────────────────────────────────────────────────────────────────────────────
+[17/34] Instruction: 0x9c  (byte offset 0x4e0)
+Total Mismatches: 147
+Source: /home/debian/complex_mismatches.c:136
+  ->  } else if (j < 10) {
+  Mismatch breakdown:
+      Register state:              147
+  Register field causing mismatch:
+      Value range:                 147
+──────────────────────────────────────────────────────────────────────────────────────
+[18/34] Instruction: 0x82  (byte offset 0x410)
+Total Mismatches: 144
+Source: /home/debian/complex_mismatches.c:101
+  ->  if (result > 500000) {
+  Mismatch breakdown:
+      Register state:              144
+  Register field causing mismatch:
+      Value range:                 144
+──────────────────────────────────────────────────────────────────────────────────────
+[19/34] Instruction: 0xa2  (byte offset 0x510)
+Total Mismatches: 140
+Source: /home/debian/complex_mismatches.c:141
+  ->  result /= (j + 1);
+  Mismatch breakdown:
+      Register state:              140
+  Register field causing mismatch:
+      Value range:                 140
+──────────────────────────────────────────────────────────────────────────────────────
+[20/34] Instruction: 0x73  (byte offset 0x398)
+Total Mismatches: 119
+Source: /home/debian/complex_mismatches.c:89
+  ->  result += z;
+  Mismatch breakdown:
+      Register state:              119
+  Register field causing mismatch:
+      Value range:                 119
+──────────────────────────────────────────────────────────────────────────────────────
+[21/34] Instruction: 0x6b  (byte offset 0x358)
+Total Mismatches: 98
+Source: /home/debian/complex_mismatches.c:84
+  ->  if (i % 3 == 0) {
+  Mismatch breakdown:
+      Register state:              98
+  Register field causing mismatch:
+      Value range:                 98
+──────────────────────────────────────────────────────────────────────────────────────
+[22/34] Instruction: 0xa5  (byte offset 0x528)
+Total Mismatches: 89
+Source: /home/debian/complex_mismatches.c:141
+  ->  result /= (j + 1);
+  Mismatch breakdown:
+      Register state:              89
+  Register field causing mismatch:
+      Value range:                 89
+──────────────────────────────────────────────────────────────────────────────────────
+[23/34] Instruction: 0x6f  (byte offset 0x378)
+Total Mismatches: 76
+Source: /home/debian/complex_mismatches.c:87
+  ->  result -= y;
+  Mismatch breakdown:
+      Register state:              76
+  Register field causing mismatch:
+      Value range:                 76
+──────────────────────────────────────────────────────────────────────────────────────
+[24/34] Instruction: 0x9b  (byte offset 0x4d8)
+Total Mismatches: 67
+Source: /home/debian/complex_mismatches.c:134
+  ->  if (j < 5) {
+  Mismatch breakdown:
+      Register state:              67
+  Register field causing mismatch:
+      Value range:                 67
+──────────────────────────────────────────────────────────────────────────────────────
+[25/34] Instruction: 0xa8  (byte offset 0x540)
+Total Mismatches: 14
+Source: /home/debian/complex_mismatches.c:153
+  ->  if (x & 0xFF) {
+  Mismatch breakdown:
+      Register state:              14
+  Register field causing mismatch:
+      Value range:                 14
+──────────────────────────────────────────────────────────────────────────────────────
+[26/34] Instruction: 0xea  (byte offset 0x750)
+Total Mismatches: 13
+Source: /home/debian/complex_mismatches.c:200
+  ->  if (result > k * 1000) {
+  Mismatch breakdown:
+      Register state:              13
+  Register field causing mismatch:
+      Value range:                 13
+──────────────────────────────────────────────────────────────────────────────────────
+[27/34] Instruction: 0x70  (byte offset 0x380)
+Total Mismatches: 4
+Source: /home/debian/complex_mismatches.c:87
+  ->  result -= y;
+  Mismatch breakdown:
+      Register state:              4
+  Register field causing mismatch:
+      Value range:                 4
+──────────────────────────────────────────────────────────────────────────────────────
+[28/34] Instruction: 0x98  (byte offset 0x4c0)
+Total Mismatches: 4
+Source: /home/debian/complex_mismatches.c:132
+  ->  for (__u32 j = 0; j < 20; j++) {
+  Mismatch breakdown:
+      Register state:              4
+  Register field causing mismatch:
+      Value range:                 4
+──────────────────────────────────────────────────────────────────────────────────────
+[29/34] Instruction: 0x8a  (byte offset 0x450)
+Total Mismatches: 3
+Source: /home/debian/complex_mismatches.c:110
+  ->  } else if (result > 100000) {
+  Mismatch breakdown:
+      Register state:              3
+  Register field causing mismatch:
+      Value range:                 3
+──────────────────────────────────────────────────────────────────────────────────────
+[30/34] Instruction: 0xe1  (byte offset 0x708)
+Total Mismatches: 3
+Source: /home/debian/complex_mismatches.c:195
+  ->  result *= modifier;
+  Mismatch breakdown:
+      Register state:              3
+  Register field causing mismatch:
+      Value range:                 3
+──────────────────────────────────────────────────────────────────────────────────────
+[31/34] Instruction: 0x8c  (byte offset 0x460)
+Total Mismatches: 2
+Source: /home/debian/complex_mismatches.c:112
+  ->  result = result / 10;
+  Mismatch breakdown:
+      Register state:              2
+  Register field causing mismatch:
+      Value range:                 2
+──────────────────────────────────────────────────────────────────────────────────────
+[32/34] Instruction: 0x99  (byte offset 0x4c8)
+Total Mismatches: 2
+Source: /home/debian/complex_mismatches.c:132
+  ->  for (__u32 j = 0; j < 20; j++) {
+  Mismatch breakdown:
+      Register state:              2
+  Register field causing mismatch:
+      Value range:                 2
+──────────────────────────────────────────────────────────────────────────────────────
+[33/34] Instruction: 0xab  (byte offset 0x558)
+Total Mismatches: 1
+Source: /home/debian/complex_mismatches.c:154
+  ->  if (y & 0xFF00) {
+  Mismatch breakdown:
+      Register state:              1
+  Register field causing mismatch:
+      Value range:                 1
+──────────────────────────────────────────────────────────────────────────────────────
+[34/34] Instruction: 0xe3  (byte offset 0x718)
+Total Mismatches: 1
+Source: /home/debian/complex_mismatches.c:211
+  ->  result = result << 1;
+  Mismatch breakdown:
+      Register state:              1
+  Register field causing mismatch:
+      Value range:                 1
+──────────────────────────────────────────────────────────────────────────────────────

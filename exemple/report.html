@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BPF Verifier Heatmap — complex_verifie</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background:#ffffff; color:#1a1a1a; font-family:'Segoe UI',system-ui,sans-serif; padding:2rem; }
+h1 { font-size:1.4rem; margin-bottom:0.3rem; color:#1a1a1a; }
+.meta { font-size:0.85rem; color:#666; margin-bottom:1.5rem; }
+.cards { display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem; }
+.card { background:#f5f5f5; border:1px solid #e0e0e0; border-radius:8px; padding:0.7rem 1.2rem; min-width:160px; }
+.card .lbl { font-size:0.75rem; color:#666; }
+.card .val { font-size:1.3rem; font-weight:600; color:#1a1a1a; }
+.legend { display:flex; align-items:center; gap:0.8rem; margin-bottom:1.2rem; font-size:0.82rem; color:#444; }
+.legend-bar { width:160px; height:14px; border-radius:3px; background:linear-gradient(to right,#fff7f7,#d32f2f); border:1px solid #ccc; }
+.code-wrap { background:#fafafa; border:1px solid #e0e0e0; border-radius:8px; overflow:auto; font-family:'JetBrains Mono','Fira Code',monospace; font-size:0.82rem; line-height:1.55; }
+table.code { width:100%; border-collapse:collapse; }
+table.code tr { border-bottom:1px solid #f0f0f0; }
+table.code tr:hover { background:#f5f5f5 !important; cursor:default; }
+td.ln { user-select:none; text-align:right; padding:2px 10px 2px 14px; color:#aaa; min-width:3.5em; border-right:1px solid #e0e0e0; vertical-align:top; }
+td.heat { width:6px; min-width:6px; padding:0; vertical-align:top; }
+td.cnt { text-align:right; padding:2px 8px; min-width:5em; font-size:0.78rem; font-weight:600; color:#c62828; vertical-align:top; }
+td.cnt.z { color:transparent; }
+td.src { padding:2px 14px 2px 10px; white-space:pre; vertical-align:top; color:#1a1a1a; }
+td.dist { padding:2px 14px 2px 10px; vertical-align:top; }
+.dist-wrap { display:flex; flex-wrap:wrap; gap:4px 10px; padding:3px 0 4px; font-size:0.74rem; }
+.dist-item { display:flex; align-items:center; gap:4px; color:#333; }
+.dist-val { color:#c62828; font-weight:600; }
+.dist-label { color:#555; }
+.dist-section-hdr { width:100%; font-size:0.72rem; font-weight:600; color:#888; text-transform:uppercase; letter-spacing:0.04em; padding-top:4px; }
+</style>
+</head>
+<body>
+<h1>BPF Verifier Heatmap</h1>
+<div class="meta">Program: <strong>complex_verifie</strong> &nbsp;|&nbsp; Source: <strong>/home/debian/complex_mismatches.c</strong></div>
+<div class="cards">
+  <div class="card"><div class="lbl">Total mismatches</div><div class="val">10945</div></div>
+  <div class="card"><div class="lbl">Hot lines</div><div class="val">22</div></div>
+  <div class="card"><div class="lbl">Hottest line</div><div class="val">:101</div></div>
+  <div class="card"><div class="lbl">Source lines</div><div class="val">229</div></div>
+</div>
+<div class="legend"><span>Low</span><div class="legend-bar"></div><span>High</span></div>
+<div class="code-wrap"><table class="code">
+<tr><td class="ln">1</td><td class="heat"></td><td class="cnt z">0</td><td class="src">/*</td></tr>
+<tr><td class="ln">2</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * Complex BPF Program - Designed to Trigger Verifier State Mismatches</td></tr>
+<tr><td class="ln">3</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * </td></tr>
+<tr><td class="ln">4</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * This program has:</td></tr>
+<tr><td class="ln">5</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Multiple nested branches and conditions</td></tr>
+<tr><td class="ln">6</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Complex loops with unpredictable bounds</td></tr>
+<tr><td class="ln">7</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - State divergence points</td></tr>
+<tr><td class="ln">8</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Random number generation (unpredictable)</td></tr>
+<tr><td class="ln">9</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Helper function calls with conditional arguments</td></tr>
+<tr><td class="ln">10</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Bitwise operations and arithmetic</td></tr>
+<tr><td class="ln">11</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * - Multiple execution paths that converge</td></tr>
+<tr><td class="ln">12</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * </td></tr>
+<tr><td class="ln">13</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * This is guaranteed to trigger many state comparisons and mismatches</td></tr>
+<tr><td class="ln">14</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * because the verifier must track all possible paths through the branches.</td></tr>
+<tr><td class="ln">15</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * </td></tr>
+<tr><td class="ln">16</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> * Compile with: clang -g -O2 -target bpf -I. -c complex_mismatches.c -o complex_mismatches.o</td></tr>
+<tr><td class="ln">17</td><td class="heat"></td><td class="cnt z">0</td><td class="src"> */</td></tr>
+<tr><td class="ln">18</td><td class="heat"></td><td class="cnt z">0</td><td class="src"></td></tr>
+<tr><td class="ln">19</td><td class="heat"></td><td class="cnt z">0</td><td class="src">#include &quot;vmlinux.h&quot;</td></tr>
+<tr><td class="ln">20</td><td class="heat"></td><td class="cnt z">0</td><td class="src">#include &lt;bpf/bpf_helpers.h&gt;</td></tr>
+<tr><td class="ln">21</td><td class="heat"></td><td class="cnt z">0</td><td class="src"></td></tr>
+<tr><td class="ln">22</td><td class="heat"></td><td class="cnt z">0</td><td class="src">char LICENSE[] SEC(&quot;license&quot;) = &quot;GPL&quot;;</td></tr>
+<tr><td class="ln">23</td><td class="heat"></td><td class="cnt z">0</td><td class="src"></td></tr>
+<tr><td class="ln">24</td><td class="heat"></td><td class="cnt z">0</td><td class="src">/* BPF map for statistics */</td></tr>
+<tr><td class="ln">25</td><td class="heat"></td><td class="cnt z">0</td><td class="src">struct {</td></tr>
+<tr><td class="ln">26</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __uint(type, BPF_MAP_TYPE_ARRAY);</td></tr>
+<tr><td class="ln">27</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __uint(max_entries, 10);</td></tr>
+<tr><td class="ln">28</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __type(key, __u32);</td></tr>
+<tr><td class="ln">29</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __type(value, __u64);</td></tr>
+<tr><td class="ln">30</td><td class="heat"></td><td class="cnt z">0</td><td class="src">} stats_map SEC(&quot;.maps&quot;);</td></tr>
+<tr><td class="ln">31</td><td class="heat"></td><td class="cnt z">0</td><td class="src"></td></tr>
+<tr><td class="ln">32</td><td class="heat"></td><td class="cnt z">0</td><td class="src">SEC(&quot;tracepoint/syscalls/sys_enter_write&quot;)</td></tr>
+<tr><td class="ln">33</td><td class="heat"></td><td class="cnt z">0</td><td class="src">int complex_verifier_challenge(void *ctx)</td></tr>
+<tr><td class="ln">34</td><td class="heat"></td><td class="cnt z">0</td><td class="src">{</td></tr>
+<tr><td class="ln">35</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Get random values - unpredictable to verifier */</td></tr>
+<tr><td class="ln">36</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __u32 x = bpf_get_prandom_u32();</td></tr>
+<tr><td class="ln">37</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __u32 y = bpf_get_prandom_u32();</td></tr>
+<tr><td class="ln">38</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __u32 z = bpf_get_prandom_u32();</td></tr>
+<tr><td class="ln">39</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __u64 result = 0;</td></tr>
+<tr><td class="ln">40</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">41</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Branch 1: First major divergence */</td></tr>
+<tr><td class="ln">42</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    if (x &gt; 1000) {</td></tr>
+<tr><td class="ln">43</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Branch 1A */</td></tr>
+<tr><td class="ln">44</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (y &gt; 500) {</td></tr>
+<tr><td class="ln">45</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            /* Branch 1A1: Nested deep */</td></tr>
+<tr><td class="ln">46</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (z &gt; 200) {</td></tr>
+<tr><td class="ln">47</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result = x + y + z;</td></tr>
+<tr><td class="ln">48</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else if (z &gt; 100) {</td></tr>
+<tr><td class="ln">49</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result = x + y - z;</td></tr>
+<tr><td class="ln">50</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr><td class="ln">51</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result = x + y;</td></tr>
+<tr><td class="ln">52</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">53</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else if (y &gt; 250) {</td></tr>
+<tr><td class="ln">54</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            /* Branch 1A2 */</td></tr>
+<tr><td class="ln">55</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = x - y + z;</td></tr>
+<tr><td class="ln">56</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">57</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            /* Branch 1A3 */</td></tr>
+<tr><td class="ln">58</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = (x * y) / (z + 1);</td></tr>
+<tr><td class="ln">59</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">60</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else if (x &gt; 500) {</td></tr>
+<tr><td class="ln">61</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Branch 1B: Multiple conditions */</td></tr>
+<tr><td class="ln">62</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (y &gt; 750) {</td></tr>
+<tr><td class="ln">63</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = (y * z) / (x + 1);</td></tr>
+<tr><td class="ln">64</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else if (y &gt; 250) {</td></tr>
+<tr><td class="ln">65</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = x + (y / (z + 1));</td></tr>
+<tr><td class="ln">66</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">67</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = z + (x / (y + 1));</td></tr>
+<tr><td class="ln">68</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">69</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else {</td></tr>
+<tr><td class="ln">70</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Branch 1C: Another path */</td></tr>
+<tr><td class="ln">71</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (z &gt; 3000) {</td></tr>
+<tr><td class="ln">72</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = z * x;</td></tr>
+<tr><td class="ln">73</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else if (z &gt; 1000) {</td></tr>
+<tr><td class="ln">74</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = z + x;</td></tr>
+<tr><td class="ln">75</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">76</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = x - z;</td></tr>
+<tr><td class="ln">77</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">78</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">79</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">80</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Loop with unpredictable iterations - causes state explosion */</td></tr>
+<tr><td class="ln">81</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    #pragma unroll(0)</td></tr>
+<tr><td class="ln">82</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    for (__u32 i = 0; i &lt; 15; i++) {</td></tr>
+<tr><td class="ln">83</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Condition in loop - multiple paths */</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">84</td><td class="heat" style="background:rgb(211,189,189)"></td><td class="cnt">98</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        if (i % 3 == 0) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">98</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">98</span></span></div></td></tr>
+<tr><td class="ln">85</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result += x;</td></tr>
+<tr><td class="ln">86</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else if (i % 3 == 1) {</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">87</td><td class="heat" style="background:rgb(211,190,190)"></td><td class="cnt">80</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">            result -= y;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">80</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">80</span></span></div></td></tr>
+<tr><td class="ln">88</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr style="background:rgb(255,246,246)"><td class="ln">89</td><td class="heat" style="background:rgb(211,134,134)"></td><td class="cnt">1373</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">            result += z;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">1373</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">1373</span></span></div></td></tr>
+<tr><td class="ln">90</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">91</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">92</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Nested condition in loop */</td></tr>
+<tr style="background:rgb(255,243,243)"><td class="ln">93</td><td class="heat" style="background:rgb(211,106,106)"></td><td class="cnt">2009</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        if (i &gt; 5) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">2009</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">1966</span></span><span class="dist-item"><span class="dist-label">ID</span><span class="dist-val" style="color:#1e88e5">41</span></span><span class="dist-item"><span class="dist-label">Other</span><span class="dist-val" style="color:#c0ca33">2</span></span></div></td></tr>
+<tr><td class="ln">94</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (result &gt; 1000000) {</td></tr>
+<tr><td class="ln">95</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result = result &gt;&gt; 4;</td></tr>
+<tr><td class="ln">96</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">97</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">98</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">99</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">100</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Branch 2: Convergence point with different states */</td></tr>
+<tr style="background:rgb(255,235,235)"><td class="ln">101</td><td class="heat" style="background:rgb(211,47,47)"></td><td class="cnt">3377</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    if (result &gt; 500000) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">3377</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">3377</span></span></div></td></tr>
+<tr><td class="ln">102</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Path A: High result */</td></tr>
+<tr><td class="ln">103</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        result = result / 100;</td></tr>
+<tr><td class="ln">104</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">105</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (result &gt; 5000) {</td></tr>
+<tr style="background:rgb(255,252,252)"><td class="ln">106</td><td class="heat" style="background:rgb(211,174,174)"></td><td class="cnt">438</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">            result = result - 1000;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">438</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">438</span></span></div></td></tr>
+<tr><td class="ln">107</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">108</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = result + 500;</td></tr>
+<tr><td class="ln">109</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">110</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">3</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    } else if (result &gt; 100000) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">3</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">3</span></span></div></td></tr>
+<tr><td class="ln">111</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Path B: Medium result */</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">112</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">2</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        result = result / 10;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">2</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">2</span></span></div></td></tr>
+<tr><td class="ln">113</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">114</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (result &gt; 2000) {</td></tr>
+<tr><td class="ln">115</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = result * 2;</td></tr>
+<tr><td class="ln">116</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">117</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = result / 2;</td></tr>
+<tr><td class="ln">118</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">119</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else {</td></tr>
+<tr><td class="ln">120</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Path C: Low result */</td></tr>
+<tr><td class="ln">121</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        result = result * 10;</td></tr>
+<tr><td class="ln">122</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">123</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (result &lt; 1000) {</td></tr>
+<tr><td class="ln">124</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = result + 5000;</td></tr>
+<tr><td class="ln">125</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">126</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result = result - 1000;</td></tr>
+<tr><td class="ln">127</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">128</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">129</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">130</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Another loop with different loop variable interactions */</td></tr>
+<tr><td class="ln">131</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    #pragma unroll(0)</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">132</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">6</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    for (__u32 j = 0; j &lt; 20; j++) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">6</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">6</span></span></div></td></tr>
+<tr><td class="ln">133</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Multiple conditions create more divergence */</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">134</td><td class="heat" style="background:rgb(211,191,191)"></td><td class="cnt">67</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        if (j &lt; 5) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">67</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">67</span></span></div></td></tr>
+<tr><td class="ln">135</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result += j;</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">136</td><td class="heat" style="background:rgb(211,187,187)"></td><td class="cnt">147</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        } else if (j &lt; 10) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">147</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">147</span></span></div></td></tr>
+<tr><td class="ln">137</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result -= j;</td></tr>
+<tr><td class="ln">138</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else if (j &lt; 15) {</td></tr>
+<tr><td class="ln">139</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result *= j;</td></tr>
+<tr><td class="ln">140</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr style="background:rgb(255,252,252)"><td class="ln">141</td><td class="heat" style="background:rgb(211,177,177)"></td><td class="cnt">383</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">            result /= (j + 1);</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">383</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">383</span></span></div></td></tr>
+<tr><td class="ln">142</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">143</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">144</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* Bitwise operations */</td></tr>
+<tr><td class="ln">145</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (j &amp; 1) {</td></tr>
+<tr><td class="ln">146</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result ^= j;</td></tr>
+<tr><td class="ln">147</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">148</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result &amp;= (result | j);</td></tr>
+<tr><td class="ln">149</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">150</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">151</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">152</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Branch 3: Complex nested conditions */</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">153</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">14</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    if (x &amp; 0xFF) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">14</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">14</span></span></div></td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">154</td><td class="heat" style="background:rgb(211,194,194)"></td><td class="cnt">1</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        if (y &amp; 0xFF00) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">1</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">1</span></span></div></td></tr>
+<tr><td class="ln">155</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (z &amp; 0xFF0000) {</td></tr>
+<tr><td class="ln">156</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result += (x &amp; y &amp; z);</td></tr>
+<tr><td class="ln">157</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr><td class="ln">158</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result += (x | y | z);</td></tr>
+<tr><td class="ln">159</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">160</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">161</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (z ^ x) {</td></tr>
+<tr><td class="ln">162</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result -= (x ^ y);</td></tr>
+<tr><td class="ln">163</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr><td class="ln">164</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result += (x ^ z);</td></tr>
+<tr><td class="ln">165</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">166</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">167</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else {</td></tr>
+<tr><td class="ln">168</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if ((y + z) &gt; (x + 100)) {</td></tr>
+<tr><td class="ln">169</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (result &amp; 0x1) {</td></tr>
+<tr><td class="ln">170</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result += 1;</td></tr>
+<tr><td class="ln">171</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr><td class="ln">172</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                result -= 1;</td></tr>
+<tr><td class="ln">173</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">174</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">175</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result += 2;</td></tr>
+<tr><td class="ln">176</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">177</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">178</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">179</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Another convergence point with state tracking */</td></tr>
+<tr><td class="ln">180</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    __u32 modifier = 0;</td></tr>
+<tr><td class="ln">181</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    if (result &gt; 0) {</td></tr>
+<tr><td class="ln">182</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (result &gt; 1000) {</td></tr>
+<tr><td class="ln">183</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            if (result &gt; 10000) {</td></tr>
+<tr><td class="ln">184</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                modifier = 10;</td></tr>
+<tr><td class="ln">185</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr><td class="ln">186</td><td class="heat"></td><td class="cnt z">0</td><td class="src">                modifier = 5;</td></tr>
+<tr><td class="ln">187</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">188</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">189</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            modifier = 1;</td></tr>
+<tr><td class="ln">190</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">191</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else {</td></tr>
+<tr><td class="ln">192</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        modifier = 0;</td></tr>
+<tr><td class="ln">193</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">194</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">195</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">3</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    result *= modifier;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">3</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">3</span></span></div></td></tr>
+<tr><td class="ln">196</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">197</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Final loop with result-dependent behavior */</td></tr>
+<tr><td class="ln">198</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    #pragma unroll(0)</td></tr>
+<tr><td class="ln">199</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    for (__u32 k = 0; k &lt; 10; k++) {</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">200</td><td class="heat" style="background:rgb(211,193,193)"></td><td class="cnt">13</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        if (result &gt; k * 1000) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">13</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">13</span></span></div></td></tr>
+<tr><td class="ln">201</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result -= k;</td></tr>
+<tr><td class="ln">202</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        } else {</td></tr>
+<tr><td class="ln">203</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            result += k;</td></tr>
+<tr><td class="ln">204</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">205</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        </td></tr>
+<tr><td class="ln">206</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        /* State tracking within loop */</td></tr>
+<tr><td class="ln">207</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        if (k &gt; 3) {</td></tr>
+<tr style="background:rgb(255,245,245)"><td class="ln">208</td><td class="heat" style="background:rgb(211,125,125)"></td><td class="cnt">1572</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">            if (result &amp; 0x1) {</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">1572</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">1572</span></span></div></td></tr>
+<tr style="background:rgb(255,253,253)"><td class="ln">209</td><td class="heat" style="background:rgb(211,186,186)"></td><td class="cnt">178</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">                result = result &gt;&gt; 1;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">178</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">178</span></span></div></td></tr>
+<tr><td class="ln">210</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            } else {</td></tr>
+<tr style="background:rgb(255,254,254)"><td class="ln">211</td><td class="heat" style="background:rgb(211,194,194)"></td><td class="cnt">1</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">                result = result &lt;&lt; 1;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">1</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">1</span></span></div></td></tr>
+<tr><td class="ln">212</td><td class="heat"></td><td class="cnt z">0</td><td class="src">            }</td></tr>
+<tr><td class="ln">213</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        }</td></tr>
+<tr><td class="ln">214</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">215</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">216</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Update map with result - different branches lead here */</td></tr>
+<tr style="background:rgb(255,252,252)"><td class="ln">217</td><td class="heat" style="background:rgb(211,175,175)"></td><td class="cnt">419</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    __u32 key = 0;</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">419</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">419</span></span></div></td></tr>
+<tr style="background:rgb(255,252,252)"><td class="ln">218</td><td class="heat" style="background:rgb(211,174,174)"></td><td class="cnt">439</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">    __u64 *val = bpf_map_lookup_elem(&amp;stats_map, &amp;key);</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">439</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">439</span></span></div></td></tr>
+<tr><td class="ln">219</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    if (val) {</td></tr>
+<tr style="background:rgb(255,253,253)"><td class="ln">220</td><td class="heat" style="background:rgb(211,180,180)"></td><td class="cnt">322</td><td class="src" style="padding:0"><div style="padding:2px 14px 0 10px;white-space:pre;">        __sync_fetch_and_add(val, result);</div><div class="dist-wrap" style="padding:3px 14px 5px 10px;"><span class="dist-item"><span class="dist-label">Registers</span><span class="dist-val" style="color:#e53935">322</span></span><span class="dist-section-hdr">Register field:</span><span class="dist-item"><span class="dist-label">Range</span><span class="dist-val" style="color:#fb8c00">322</span></span></div></td></tr>
+<tr><td class="ln">221</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">222</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    </td></tr>
+<tr><td class="ln">223</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    /* Final conditional return */</td></tr>
+<tr><td class="ln">224</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    if (result &amp; 1) {</td></tr>
+<tr><td class="ln">225</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        return result &amp; 0xFF;</td></tr>
+<tr><td class="ln">226</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    } else {</td></tr>
+<tr><td class="ln">227</td><td class="heat"></td><td class="cnt z">0</td><td class="src">        return (result &gt;&gt; 8) &amp; 0xFF;</td></tr>
+<tr><td class="ln">228</td><td class="heat"></td><td class="cnt z">0</td><td class="src">    }</td></tr>
+<tr><td class="ln">229</td><td class="heat"></td><td class="cnt z">0</td><td class="src">}</td></tr>
+</table></div>
+</body>
+</html>
