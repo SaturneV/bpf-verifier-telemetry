@@ -132,7 +132,7 @@ def fig1(prog_df, out_dir, fmt):
             dom_counts[dom] += 1
     dom_pcts = [dom_counts[c] / len(prog_df) * 100 for c in cats]
 
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(9, 8))
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 10))
     #fig.suptitle("Verifier State Mismatch Category Distribution",
     #             fontsize=13, fontweight="bold")
 
@@ -319,8 +319,8 @@ def fig4a(prog_df, out_dir, fmt):
         print("    [SKIP]")
         return
 
-    groups     = [g for g in ["loop","subprog","map","network","tracing","other"]
-                  if g in prog_df["group"].values]
+    groups     = [g for g in ["loop","map","network","other"]
+                  if g in prog_df["group"].values] # subprog/tracing categories excluded (not statistically representative)
     group_data = [prog_df[prog_df["group"]==g]["total_mismatches"].values
                   for g in groups]
 
@@ -355,9 +355,9 @@ def fig4b(prog_df, out_dir, fmt):
         print("    [SKIP]")
         return
 
-    cats   = [c for c in STATE_CATS if prog_df[c].sum() > 0]
-    groups = [g for g in ["loop","subprog","map","network","tracing","other"]
-              if g in prog_df["group"].values]
+    cats = STATE_CATS
+    groups = [g for g in ["loop", "map", "network", "other"]
+              if g in prog_df["group"].values] # subprog/tracing categories excluded (not statistically representative)
 
     matrix, row_labels = [], []
     for g in groups:
@@ -369,9 +369,8 @@ def fig4b(prog_df, out_dir, fmt):
     matrix_df = pd.DataFrame(matrix, index=row_labels,
                               columns=[STATE_LABELS[c] for c in cats])
 
-    fig, ax = plt.subplots(figsize=(7, 4))
-    #fig.suptitle("Verifier Bottleneck Characteristics by Program Class",
-    #             fontsize=13, fontweight="bold")
+    # Wider figure to accommodate all 8 columns
+    fig, ax = plt.subplots(figsize=(8, 4))
 
     sns.heatmap(matrix_df, ax=ax, cmap="YlOrRd",
                 annot=True, fmt=".0f", annot_kws={"size": 8},
